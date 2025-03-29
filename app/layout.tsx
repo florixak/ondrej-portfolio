@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Ondřej Pták | Frontend Developer",
@@ -51,11 +52,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`relative antialiased bg-background`}>
-        <Header />
-        <main className="min-h-screen flex flex-col justify-between my-24 mx-5">
-          {children}
-        </main>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          // disableTransitionOnChange
+        >
+          <Header />
+          <main className="min-h-screen flex flex-col my-24 mx-5 gap-10">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
