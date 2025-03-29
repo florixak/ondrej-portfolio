@@ -50,9 +50,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased bg-background`}>
+      <body className={`relative antialiased bg-background`}>
         <Header />
-        <main className="min-h-screen flex flex-col justify-between">
+        <main className="min-h-screen flex flex-col justify-between my-24 mx-5">
           {children}
         </main>
         <Footer />
