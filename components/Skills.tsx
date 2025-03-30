@@ -27,6 +27,11 @@ const skills = [
     icon: "https://camo.githubusercontent.com/29d02b3669d6450d67e043cf5909e740dcb94c1e2306d88ac48b15b4ec55dc65/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6a6176617363726970742d2532333332333333302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d253233463744463145",
   },
   {
+    id: 8,
+    name: "Vite",
+    icon: "https://camo.githubusercontent.com/e9a836f9365e97788e7bf65da1191113e36b53e1083204680da198b83b4937ee/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f766974652d2532333634364346462e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d76697465266c6f676f436f6c6f723d7768697465",
+  },
+  {
     id: 6,
     name: "HTML",
     icon: "https://camo.githubusercontent.com/d4d9d935f85b68223a3514c6a889ea3ed6a77afb5f560c05baa1a1b168077830/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f68746d6c352d2532334533344632362e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d68746d6c35266c6f676f436f6c6f723d7768697465",
@@ -35,11 +40,6 @@ const skills = [
     id: 7,
     name: "CSS",
     icon: "https://camo.githubusercontent.com/930c71eac967cc5cec61c0aa08ba3719f9cb68e28cdffa63b28b0a31be1663b4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f637373332d2532333135373242362e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d63737333266c6f676f436f6c6f723d7768697465",
-  },
-  {
-    id: 8,
-    name: "Vite",
-    icon: "https://camo.githubusercontent.com/e9a836f9365e97788e7bf65da1191113e36b53e1083204680da198b83b4937ee/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f766974652d2532333634364346462e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d76697465266c6f676f436f6c6f723d7768697465",
   },
   {
     id: 9,
@@ -66,7 +66,7 @@ const Skills = () => {
     <section className="flex w-full flex-col items-center justify-center overflow-hidden max-w-2xl mx-auto">
       <h2 className="mb-8 text-2xl font-bold text-foreground">My Skills</h2>
       <div className="relative w-full scale-125">
-        <Marquee pauseOnHover className="[--duration:20s]">
+        <Marquee pauseOnHover className="[--duration:25s]">
           {skillsFirst.map((skill) => (
             <img
               key={skill.id}
@@ -76,7 +76,7 @@ const Skills = () => {
             />
           ))}
         </Marquee>
-        <Marquee reverse pauseOnHover className="[--duration:20s]">
+        <Marquee reverse pauseOnHover className="[--duration:25s]">
           {skillsSecond.map((skill) => (
             <img
               key={skill.id}
@@ -86,6 +86,7 @@ const Skills = () => {
             />
           ))}
         </Marquee>
+
         <div className="pointer-events-none absolute inset-y-0 left-0 md:left-16 w-1/4 bg-gradient-to-r from-background"></div>
         <div className="pointer-events-none absolute inset-y-0 right-0 md:right-16 w-1/4 bg-gradient-to-l from-background"></div>
       </div>
