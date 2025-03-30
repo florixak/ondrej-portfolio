@@ -38,7 +38,7 @@ export function Marquee({
   pauseOnHover = false,
   children,
   vertical = false,
-  repeat = 4,
+  repeat = 8,
   ...props
 }: MarqueeProps) {
   return (
@@ -63,7 +63,9 @@ export function Marquee({
               "animate-marquee-vertical flex-col": vertical,
               "group-hover:[animation-play-state:paused]": pauseOnHover,
             })}
-            style={reverse ? { animationDirection: "reverse" } : undefined}
+            style={{
+              animationDirection: reverse ? "reverse" : "normal",
+            }}
           >
             {children}
           </div>
