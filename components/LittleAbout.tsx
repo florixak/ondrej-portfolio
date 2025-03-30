@@ -26,8 +26,8 @@ const contacts = [
 const LittleAbout = () => {
   return (
     <section className="flex flex-col gap-4 p-4 rounded-lg border-foreground/20 border mx-auto max-w-2xl text-foreground">
-      <div className="flex items-center justify-between">
-        <div className="flex flex-col gap-1">
+      <div className="flex items-center sm:justify-between flex-wrap md:gap-0 gap-4 justify-center">
+        <div className="flex flex-col gap-1 items-center md:items-start">
           <h1 className="text-3xl font-semibold">Ondřej Pták</h1>
           <p className="flex items-center gap-2 text-base text-muted-foreground">
             <MapPin /> Pilsen, Czech Republic
