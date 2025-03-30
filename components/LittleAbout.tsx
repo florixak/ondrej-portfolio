@@ -33,9 +33,15 @@ const LittleAbout = () => {
             <MapPin /> Pilsen, Czech Republic
           </p>
         </div>
-        <div className="flex gap-4 text-3xl">
+        <div className="flex gap-4 scale-110 mr-5">
           {contacts.map((contact) => (
-            <a key={contact.name} href={contact.href} target="_blank">
+            <a
+              key={contact.name}
+              href={contact.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200 border border-foreground/20 rounded-md p-2 hover:bg-foreground/10"
+            >
               {contact.icon}
             </a>
           ))}
