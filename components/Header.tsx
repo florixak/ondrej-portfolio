@@ -11,7 +11,10 @@ const links = [
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 h-18 w-full bg-background text-foreground flex justify-between items-center px-12 py-4 z-50 shadow-lg">
-      <h1 className="font-bold">ptakondrej.dev</h1>
+      <div>
+        <h1 className="font-bold">ptakondrej.dev</h1>
+        <p className="text-sm text-muted-foreground">Ondřej Pták</p>
+      </div>
       <nav className="flex gap-8 items-center">
         {links.map((link) => (
           <Link key={link.name} href={link.href} className="nav-link">
