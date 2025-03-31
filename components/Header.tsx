@@ -2,6 +2,7 @@ import ThemeSwitch from "./ThemeSwitch";
 import MobileNav from "./MobileNav";
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
+import LanguageSwitch from "./LanguageSwitch";
 
 export type NavLink = {
   name: string;
@@ -32,6 +33,7 @@ const Header = async () => {
             {link.name}
           </Link>
         ))}
+        <LanguageSwitch />
         <ThemeSwitch />
       </nav>
       <MobileNav navLinks={navLinks} />
