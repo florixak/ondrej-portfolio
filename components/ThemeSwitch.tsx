@@ -19,7 +19,7 @@ const ThemeSwitch = () => {
   };
 
   if (!mounted) {
-    return <button />;
+    return <button className="w-6" />;
   }
 
   return (
