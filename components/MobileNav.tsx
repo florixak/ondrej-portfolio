@@ -1,16 +1,12 @@
 "use client";
 
 import Link from "next/link";
-
+import { links } from "./Header";
 import ThemeSwitch from "./ThemeSwitch";
 import MobileNavButton from "./MobileNavButton";
 import { useState } from "react";
 
-type MobileNavProps = {
-  links;
-};
-
-const MobileNav = ({ links }: MobileNavProps) => {
+const MobileNav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleOpenMenu = () => {
