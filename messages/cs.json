@@ -1,0 +1,39 @@
+{
+  "header": {
+    "home": "Domů",
+    "work": "Projekty",
+    "experience": "Zkušenosti",
+    "about": "O mně",
+    "contact": "Kontakt",
+    "language": {
+      "title": "Jazyk",
+      "en": "Anglicky",
+      "cs": "Česky"
+    }
+  },
+  "home": {
+    "about": {
+      "title": "Ondřej Pták",
+      "location": "Plzeň, Česká republika",
+      "bio": [
+        "Jsem 19letý český Front-end vývojář, který se o programování zajímá od 8. třídy.",
+        "V současné době jsem v posledním ročníku střední školy se specializací vývoj aplikací."
+      ]
+    },
+    "skills": {
+      "title": "Dovednosti",
+      "description": "Zde jsou některé z technologií, které ovládám."
+    },
+    "work": {
+      "title": "Práce & Projekty",
+      "description": "Zde jsou některé z projektů, na kterých jsem v minulosti pracoval."
+    },
+    "experience": {
+      "title": "Zkušenosti",
+      "description": "Zde jsou některé z mých zkušeností v oblasti vývoje webových aplikací."
+    }
+  },
+  "footer": {
+    "text": "Vytvořeno s ❤ Ondřejem v Plzni"
+  }
+}

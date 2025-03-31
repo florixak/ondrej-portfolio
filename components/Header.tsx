@@ -1,6 +1,6 @@
-import Link from "next/link";
 import ThemeSwitch from "./ThemeSwitch";
 import MobileNav from "./MobileNav";
+import { Link } from "@/i18n/routing";
 
 export const links = [
   { name: "Home", href: "/" },

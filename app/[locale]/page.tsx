@@ -3,14 +3,18 @@ import LittleAbout from "@/components/LittleAbout";
 import Skills from "@/components/Skills";
 import { Briefcase, CodeSquare } from "lucide-react";
 
-export default function Home() {
+import { getTranslations } from "next-intl/server";
+
+export default async function Home() {
+  const t = await getTranslations("home");
+
   return (
     <>
       <LittleAbout />
       <Skills />
       <section className="flex gap-4 justify-center items-center mt-10 flex-wrap">
         <CardTilt
-          title="Work & Projects"
+          title={t("work.title")}
           description="Here are some of my projects that I have worked on in the past."
           image={<CodeSquare className="card-image" />}
           href="/work"
