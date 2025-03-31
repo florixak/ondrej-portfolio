@@ -10,7 +10,8 @@ import { NextIntlClientProvider } from "next-intl";
 
 export const metadata: Metadata = {
   title: "Ondřej Pták | Frontend Developer",
-  description: "",
+  description:
+    "Frontend developer with a passion for creating beautiful and functional web applications.",
   keywords: [
     "frontend",
     "developer",
@@ -48,6 +49,31 @@ export const metadata: Metadata = {
   },
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: Locale };
+}): Promise<Metadata> {
+  const { locale } = params;
+
+  if (!routing.locales.includes(locale)) {
+    return metadata;
+  }
+
+  const messages = await getMessages({ locale });
+
+  console.log("messages", messages);
+
+  return {
+    ...metadata,
+    title: messages?.title || metadata.title,
+    description: messages?.description || metadata.description,
+    openGraph: {
+      ...metadata.openGraph,
+      locale,
+    },
+  };
+}
 export default async function RootLayout({
   children,
   params,
