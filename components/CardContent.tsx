@@ -9,7 +9,7 @@ type CardContentProps = {
 const CardContent = ({ title, description, image }: CardContentProps) => {
   return (
     <div className="relative flex flex-col p-4 gap-4 bg-background h-full rounded-lg items-center justify-center overflow-hidden">
-      {image}
+      <div className="mb-10 md:mb-0">{image}</div>
 
       <div className="absolute flex flex-col gap-2 bottom-0">
         <h2 className="text-2xl font-bold md:translate-y-10 md:group-hover:translate-y-0 transition-transform duration-400 ease-in-out text-center">

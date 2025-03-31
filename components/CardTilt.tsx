@@ -32,8 +32,8 @@ const CardTilt = ({
     const relativeX = (e.clientX - left) / width;
     const relativeY = (e.clientY - top) / height;
 
-    const tiltX = (relativeX - 0.5) * 5;
-    const tiltY = (relativeY - 0.5) * -5;
+    const tiltX = (relativeX - 0.5) * 7;
+    const tiltY = (relativeY - 0.5) * -7;
 
     const newTransform = `perspective(1000px) rotateX(${tiltY}deg) rotateY(${tiltX}deg) scale3d(1, 1, 1)`;
 
