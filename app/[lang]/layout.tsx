@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Locale } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Ondřej Pták | Frontend Developer",
@@ -44,13 +45,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ lang: Locale }>;
 }>) {
+  const { lang } = await params;
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body className={`relative antialiased bg-background`}>
         <ThemeProvider
           attribute="class"
@@ -58,7 +63,7 @@ export default function RootLayout({
           enableSystem
           // disableTransitionOnChange
         >
-          <Header />
+          <Header lang={lang} />
           <main className="min-h-screen flex flex-col my-24 mx-5 gap-10">
             {children}
           </main>

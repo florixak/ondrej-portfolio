@@ -1,15 +1,26 @@
 import Link from "next/link";
 import ThemeSwitch from "./ThemeSwitch";
 import MobileNav from "./MobileNav";
+import { Locale } from "@/lib/types";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
-export const links = [
-  { name: "Home", href: "/" },
-  { name: "My Work", href: "/work" },
-  { name: "Experience", href: "/experience" },
-  { name: "About", href: "/about" },
-];
+type HeaderProps = {
+  lang: Locale;
+};
 
-const Header = () => {
+const Header = async ({ lang }: HeaderProps) => {
+  const dict = await getDictionary(lang as Locale);
+  const { header } = dict;
+  const { home, work, experience, about } = header;
+
+  // Add language prefix to all links
+  const links = [
+    { name: home, href: `/${lang}` },
+    { name: work, href: `/${lang}/work` },
+    { name: experience, href: `/${lang}/experience` },
+    { name: about, href: `/${lang}/about` },
+  ];
+
   return (
     <header className="fixed top-0 left-0 h-18 w-full bg-background text-foreground flex justify-between items-center px-4 sm:px-12 py-4 z-50 shadow-lg">
       <div>
@@ -24,7 +35,7 @@ const Header = () => {
         ))}
         <ThemeSwitch />
       </nav>
-      <MobileNav />
+      <MobileNav links={links} />
     </header>
   );
 };
