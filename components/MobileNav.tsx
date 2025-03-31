@@ -1,12 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { links } from "./Header";
+import { NavLink } from "./Header";
 import ThemeSwitch from "./ThemeSwitch";
 import MobileNavButton from "./MobileNavButton";
 import { useState } from "react";
 
-const MobileNav = () => {
+type MobileNavProps = {
+  navLinks: NavLink[];
+};
+
+const MobileNav = ({ navLinks }: MobileNavProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleOpenMenu = () => {
@@ -22,7 +26,7 @@ const MobileNav = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {links.map((link) => (
+        {navLinks.map((link) => (
           <Link key={link.name} href={link.href} className="nav-link">
             {link.name}
           </Link>
