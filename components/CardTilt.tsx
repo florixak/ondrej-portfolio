@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import React, { useRef, useState } from "react";
 import CardContent from "./CardContent";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 type TiltCardProps = {
   title: string;

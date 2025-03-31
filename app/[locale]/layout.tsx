@@ -3,6 +3,10 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Locale, routing } from "@/i18n/routing";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
 
 export const metadata: Metadata = {
   title: "Ondřej Pták | Frontend Developer",
@@ -44,26 +48,35 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: Locale }>;
 }>) {
+  const { locale } = await params;
+  if (!routing.locales.includes(locale as Locale)) {
+    notFound();
+  }
+  const messages = await getMessages();
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`relative antialiased bg-background`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          // disableTransitionOnChange
-        >
-          <Header />
-          <main className="min-h-screen flex flex-col my-24 mx-5 gap-10">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            // disableTransitionOnChange
+          >
+            <Header />
+            <main className="min-h-screen flex flex-col my-24 mx-5 gap-10">
+              {children}
+            </main>
+            <Footer />
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
