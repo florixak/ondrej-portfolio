@@ -1,4 +1,5 @@
 {
+  "title": "Ondřej Pták | Front-end developer",
   "header": {
     "home": "Home",
     "work": "Projects",
@@ -15,7 +16,7 @@
     "about": {
       "title": "Ondřej Pták",
       "location": "Pilsen, Czech Republic",
-      "bio": [
+      "description": [
         "I am a 19 year old Czech Front-End developer who has been interested in programming since 8th grade.",
         "I am currently in my last year of high school specializing in application development."
       ]

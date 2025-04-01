@@ -1,4 +1,6 @@
 {
+  "title": "Ondřej Pták | Front-end vývojář",
+  "description": "Jsem 19letý český Front-end vývojář, který se o programování zajímá od 8. třídy. V současné době jsem v posledním ročníku střední školy se specializací vývoj aplikací.",
   "header": {
     "home": "Domů",
     "work": "Projekty",
@@ -15,10 +17,10 @@
     "about": {
       "title": "Ondřej Pták",
       "location": "Plzeň, Česká republika",
-      "bio": [
-        "Jsem 19letý český Front-end vývojář, který se o programování zajímá od 8. třídy.",
-        "V současné době jsem v posledním ročníku střední školy se specializací vývoj aplikací."
-      ]
+      "description": {
+        "0": "Jsem 19letý český Front-end vývojář, který se o programování zajímá od 8. třídy.",
+        "1": "V současné době jsem v posledním ročníku střední školy se specializací vývoj aplikací."
+      }
     },
     "skills": {
       "title": "Dovednosti",

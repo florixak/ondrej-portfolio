@@ -1,4 +1,5 @@
 import { Github, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 const contacts = [
   {
@@ -23,14 +24,15 @@ const contacts = [
   },
 ];
 
-const LittleAbout = () => {
+const LittleAbout = async () => {
+  const t = await getTranslations("home");
   return (
     <section className="flex flex-col gap-4 p-4 rounded-lg border-foreground/20 border mx-auto max-w-2xl text-foreground">
       <div className="flex items-center sm:justify-between flex-wrap md:gap-0 gap-4 justify-center">
         <div className="flex flex-col gap-1 items-center md:items-start">
           <h1 className="text-3xl font-semibold">Ondřej Pták</h1>
           <p className="flex items-center gap-2 text-base text-muted-foreground">
-            <MapPin /> Pilsen, Czech Republic
+            <MapPin /> {t("about.location")}
           </p>
         </div>
         <div className="flex gap-4 scale-110 mr-5">
@@ -48,14 +50,8 @@ const LittleAbout = () => {
         </div>
       </div>
       <ul className="flex flex-col gap-2 text-base list-disc list-outside ml-5">
-        <li>
-          I am a 19 year old Czech Front-end Web Developer who has been
-          interested in coding since 8th grade.
-        </li>
-        <li>
-          Currently, I am in my last year of high school, specializing in
-          application development.
-        </li>
+        <li>{t("about.description.0")}</li>
+        <li>{t("about.description.1")}</li>
       </ul>
     </section>
   );
