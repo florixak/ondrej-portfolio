@@ -9,7 +9,6 @@ const ThemeSwitch = () => {
 
   const [mounted, setMounted] = useState(false);
 
-  // Only show the UI after component has mounted to avoid hydration errors
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -19,12 +18,12 @@ const ThemeSwitch = () => {
   };
 
   if (!mounted) {
-    return <button className="w-6" />;
+    return <button className="w-5" />;
   }
 
   return (
     <button
-      className="bg-background cursor-pointer"
+      className="bg-background cursor-pointer w-5"
       onClick={handleThemeChange}
     >
       {theme === "dark" ? (
