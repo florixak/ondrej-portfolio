@@ -11,9 +11,9 @@ import { NextIntlClientProvider } from "next-intl";
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
-  const { locale } = params;
+  const { locale } = await params;
 
   // Define default metadata
   const defaultMetadata: Metadata = {
@@ -41,7 +41,7 @@ export async function generateMetadata({
       description: "",
       url: process.env.NEXT_PUBLIC_SITE_URL,
       siteName: "Ondřej Pták | Frontend Developer",
-      locale: "en_US",
+      locale: locale,
       type: "website",
     },
     twitter: {
