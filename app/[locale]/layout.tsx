@@ -8,47 +8,6 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 
-export const metadata: Metadata = {
-  title: "Ondřej Pták | Frontend Developer",
-  description:
-    "Frontend developer with a passion for creating beautiful and functional web applications.",
-  keywords: [
-    "frontend",
-    "developer",
-    "javascript",
-    "typescript",
-    "react",
-    "nextjs",
-    "tailwindcss",
-  ],
-  authors: [
-    {
-      name: "Ondřej Pták",
-      url: "https://github.com/florixak",
-    },
-  ],
-  creator: "Ondřej Pták",
-  openGraph: {
-    title: "Ondřej Pták | Frontend Developer",
-    description: "",
-    url: process.env.NEXT_PUBLIC_SITE_URL,
-    siteName: "Ondřej Pták | Frontend Developer",
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ondřej Pták | Frontend Developer",
-    description: "",
-    creator: "@florixak",
-  },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-};
-
 export async function generateMetadata({
   params,
 }: {
@@ -56,24 +15,65 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = params;
 
+  // Define default metadata
+  const defaultMetadata: Metadata = {
+    title: "Ondřej Pták | Frontend Developer",
+    description:
+      "Frontend developer with a passion for creating beautiful and functional web applications.",
+    keywords: [
+      "frontend",
+      "developer",
+      "javascript",
+      "typescript",
+      "react",
+      "nextjs",
+      "tailwindcss",
+    ],
+    authors: [
+      {
+        name: "Ondřej Pták",
+        url: "https://github.com/florixak",
+      },
+    ],
+    creator: "Ondřej Pták",
+    openGraph: {
+      title: "Ondřej Pták | Frontend Developer",
+      description: "",
+      url: process.env.NEXT_PUBLIC_SITE_URL,
+      siteName: "Ondřej Pták | Frontend Developer",
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Ondřej Pták | Frontend Developer",
+      description: "",
+      creator: "@florixak",
+    },
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/apple-touch-icon.png",
+    },
+  };
+
   if (!routing.locales.includes(locale)) {
-    return metadata;
+    return defaultMetadata;
   }
 
   const messages = await getMessages({ locale });
 
-  console.log("messages", messages);
-
   return {
-    ...metadata,
-    title: messages?.title || metadata.title,
-    description: messages?.description || metadata.description,
+    ...defaultMetadata,
+    title: messages?.title || defaultMetadata.title,
+    description: messages?.description || defaultMetadata.description,
     openGraph: {
-      ...metadata.openGraph,
+      ...defaultMetadata.openGraph,
       locale,
     },
   };
 }
+
 export default async function RootLayout({
   children,
   params,
