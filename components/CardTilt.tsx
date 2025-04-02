@@ -2,24 +2,15 @@
 
 import { cn } from "@/lib/utils";
 import React, { useRef, useState } from "react";
-import CardContent from "./CardContent";
 import { Link } from "@/i18n/routing";
 
 type TiltCardProps = {
-  title: string;
-  description: string;
-  image: React.ReactNode;
+  children: React.ReactNode;
   href?: string;
   className?: string;
 };
 
-const CardTilt = ({
-  title,
-  description,
-  image,
-  href,
-  className,
-}: TiltCardProps) => {
+const CardTilt = ({ children, href, className }: TiltCardProps) => {
   const [transformStyle, setTransformStyle] = useState<string | null>(null);
   const itemRef = useRef<HTMLDivElement>(null);
 
@@ -58,7 +49,7 @@ const CardTilt = ({
       }}
     >
       <Link href={href || "#"} className="h-full w-full">
-        <CardContent title={title} description={description} image={image} />
+        {children}
       </Link>
     </article>
   );

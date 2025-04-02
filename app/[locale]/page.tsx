@@ -1,3 +1,4 @@
+import CardContent from "@/components/CardContent";
 import CardTilt from "@/components/CardTilt";
 import LittleAbout from "@/components/LittleAbout";
 import Skills from "@/components/Skills";
@@ -13,18 +14,22 @@ export default async function Home() {
       <LittleAbout />
       <Skills />
       <section className="flex gap-4 justify-center items-center mt-10 flex-wrap">
-        <CardTilt
-          title={t("work.title")}
-          description="Here are some of my projects that I have worked on in the past."
-          image={<CodeSquare className="card-image" />}
-          href="/work"
-        />
-        <CardTilt
-          title="Experience"
-          description="Here are some of my experiences in the field of web development."
-          image={<Briefcase className="card-image" />}
-          href="/experience"
-        />
+        <CardTilt href="/work">
+          <CardContent
+            title={t("work.title")}
+            description={t("work.description")}
+            image={<CodeSquare className="card-image" />}
+            buttonText={t("work.buttonText")}
+          />
+        </CardTilt>
+        <CardTilt href="/experience">
+          <CardContent
+            title={t("experience.title")}
+            description={t("experience.description")}
+            image={<Briefcase className="card-image" />}
+            buttonText={t("experience.buttonText")}
+          />
+        </CardTilt>
       </section>
     </>
   );

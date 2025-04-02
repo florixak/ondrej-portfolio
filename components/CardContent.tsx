@@ -4,9 +4,15 @@ type CardContentProps = {
   title: string;
   description: string;
   image: React.ReactNode;
+  buttonText: string;
 };
 
-const CardContent = ({ title, description, image }: CardContentProps) => {
+const CardContent = ({
+  title,
+  description,
+  image,
+  buttonText,
+}: CardContentProps) => {
   return (
     <div className="relative flex flex-col p-4 gap-4 bg-background h-full rounded-lg items-center justify-center overflow-hidden">
       <div className="mb-10 md:mb-0">{image}</div>
@@ -23,7 +29,7 @@ const CardContent = ({ title, description, image }: CardContentProps) => {
         </div>
         <div className="flex items-center justify-center gap-2 -translate-y-3 md:translate-y-10 md:group-hover:-translate-y-3 md:group-hover:opacity-100 md:opacity-0 transition-all duration-400 ease-in-out">
           <Button variant="outline" className="cursor-pointer">
-            Click To View More
+            {buttonText}
           </Button>
         </div>
       </div>
