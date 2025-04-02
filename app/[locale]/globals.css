@@ -11,11 +11,11 @@
 
 @layer utilities {
   .nav-link {
-    @apply relative after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white;
+    @apply relative after:absolute after:bg-primary-green after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-primary-green;
   }
 
   .card-image {
-    @apply text-muted-foreground group-hover:text-foreground size-[8rem] md:size-[12rem] -translate-y-10 group-hover:-translate-y-15 transition-all duration-300 ease-in-out;
+    @apply md:text-foreground size-[8rem] md:size-[12rem] -translate-y-10 group-hover:-translate-y-15 transition-all duration-300 ease-in-out text-primary-green md:group-hover:text-primary-green;
   }
 
   @keyframes marquee {
@@ -152,6 +152,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-primary-green: #3bebab;
 }
 
 @layer base {
