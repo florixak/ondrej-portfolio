@@ -1,8 +1,9 @@
 import ThemeSwitch from "./ThemeSwitch";
-import MobileNav from "./MobileNav";
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import LanguageSwitch from "./LanguageSwitch";
+import NavLink from "./NavLink";
+import MobileNav from "./MobileNav";
 
 export type NavLink = {
   name: string;
@@ -29,9 +30,7 @@ const Header = async () => {
       </Link>
       <nav className="md:flex gap-8 items-center hidden">
         {navLinks.map((link) => (
-          <Link key={link.name} href={link.href} className="nav-link">
-            {link.name}
-          </Link>
+          <NavLink key={link.name} href={link.href} name={link.name} />
         ))}
         <LanguageSwitch />
         <ThemeSwitch />
