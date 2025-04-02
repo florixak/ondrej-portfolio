@@ -24,34 +24,44 @@ const LanguageSwitch = () => {
     >
       {locale === "en" ? (
         <span className="scale-125">
-          <svg viewBox="0 0 6 4" xmlns="http://www.w3.org/2000/svg">
-            <rect width="6" height="4" fill="#d7141a" />
-            <rect width="6" height="2" fill="#fff" />
-            <path d="M 0,0 2,2 0,4 z" fill="#11457e" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 16"
+            width="24"
+            height="16"
+          >
+            <rect width="24" height="8" fill="#fff" />
+            <rect y="8" width="24" height="8" fill="#d7141a" />
+            <path d="M0,0 L12,8 L0,16 Z" fill="#11457e" />
           </svg>
         </span>
       ) : (
         <span className="scale-125">
-          <svg viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
-            <rect width="10" height="7" fill="#fff" />
-            <path
-              d="M0,0.8h10 M0,2.2h10 M0,3.6h10 M0,5h10 M0,6.4h10"
-              stroke="#d02f44"
-              strokeWidth="0.8"
-            />
-            <rect width="4" height="3.8" fill="#002868" />
-            <g fill="#fff">
-              {/* simplified stars pattern */}
-              <circle cx="0.8" cy="0.8" r="0.2" />
-              <circle cx="2" cy="0.8" r="0.2" />
-              <circle cx="3.2" cy="0.8" r="0.2" />
-              <circle cx="0.8" cy="2" r="0.2" />
-              <circle cx="2" cy="2" r="0.2" />
-              <circle cx="3.2" cy="2" r="0.2" />
-              <circle cx="0.8" cy="3.2" r="0.2" />
-              <circle cx="2" cy="3.2" r="0.2" />
-              <circle cx="3.2" cy="3.2" r="0.2" />
-            </g>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 16"
+            width="24"
+            height="16"
+          >
+            <rect width="24" height="16" fill="#fff" />
+            <rect y="0" width="24" height="1.23" fill="#b22234" />
+            <rect y="2.46" width="24" height="1.23" fill="#b22234" />
+            <rect y="4.92" width="24" height="1.23" fill="#b22234" />
+            <rect y="7.38" width="24" height="1.23" fill="#b22234" />
+            <rect y="9.85" width="24" height="1.23" fill="#b22234" />
+            <rect y="12.31" width="24" height="1.23" fill="#b22234" />
+            <rect y="14.77" width="24" height="1.23" fill="#b22234" />
+            <rect width="9.6" height="8.62" fill="#3c3b6e" />
+            {/* Simplified star pattern - 9 stars to represent the full 50 */}
+            <circle cx="1.6" cy="1.44" r="0.5" fill="white" />
+            <circle cx="4.8" cy="1.44" r="0.5" fill="white" />
+            <circle cx="8.0" cy="1.44" r="0.5" fill="white" />
+            <circle cx="1.6" cy="4.31" r="0.5" fill="white" />
+            <circle cx="4.8" cy="4.31" r="0.5" fill="white" />
+            <circle cx="8.0" cy="4.31" r="0.5" fill="white" />
+            <circle cx="1.6" cy="7.18" r="0.5" fill="white" />
+            <circle cx="4.8" cy="7.18" r="0.5" fill="white" />
+            <circle cx="8.0" cy="7.18" r="0.5" fill="white" />
           </svg>
         </span>
       )}
