@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { NavLink } from "./Header";
 import ThemeSwitch from "./ThemeSwitch";
 import MobileNavButton from "./MobileNavButton";
 import { useState } from "react";
+import { Link } from "@/i18n/routing";
 
 type MobileNavProps = {
   navLinks: NavLink[];
@@ -27,7 +27,12 @@ const MobileNav = ({ navLinks }: MobileNavProps) => {
         }`}
       >
         {navLinks.map((link) => (
-          <Link key={link.name} href={link.href} className="nav-link">
+          <Link
+            key={link.name}
+            href={link.href}
+            className="nav-link"
+            onClick={handleOpenMenu}
+          >
             {link.name}
           </Link>
         ))}

@@ -23,10 +23,10 @@ const Header = async () => {
 
   return (
     <header className="fixed top-0 left-0 h-18 w-full bg-background text-foreground flex justify-between items-center px-4 sm:px-12 py-4 z-50 shadow-lg">
-      <div>
+      <Link href="/" className="cursor-pointer w-auto">
         <h1 className="font-bold">ptakondrej.dev</h1>
         <p className="text-sm text-muted-foreground">Ondřej Pták</p>
-      </div>
+      </Link>
       <nav className="md:flex gap-8 items-center hidden">
         {navLinks.map((link) => (
           <Link key={link.name} href={link.href} className="nav-link">
