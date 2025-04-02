@@ -1,5 +1,6 @@
 {
   "title": "Ondřej Pták | Front-end developer",
+  "description": "I am a 19 year old Czech Front-End developer who has been interested in programming since 8th grade. I am currently in my last year of high school specializing in application development.",
   "header": {
     "home": "Home",
     "work": "Projects",
@@ -16,10 +17,10 @@
     "about": {
       "title": "Ondřej Pták",
       "location": "Pilsen, Czech Republic",
-      "description": [
-        "I am a 19 year old Czech Front-End developer who has been interested in programming since 8th grade.",
-        "I am currently in my last year of high school specializing in application development."
-      ]
+      "description": {
+        "0": "I am a 19 year old Czech Front-end developer who has been interested in programming since 8th grade.",
+        "1": "I am currently in my last year of high school specializing in application development."
+      }
     },
     "skills": {
       "title": "Skills",
