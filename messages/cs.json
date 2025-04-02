@@ -1,6 +1,8 @@
 {
-  "title": "Ondřej Pták | Front-end vývojář",
-  "description": "Jsem 19letý český <highlight>Front-end vývojář</highlight>, který se o programování zajímá od 8. třídy. V současné době jsem v posledním ročníku střední školy se specializací vývoj aplikací.",
+  "metadata": {
+    "title": "Ondřej Pták | Front-end vývojář",
+    "description": "Jsem 19letý český Front-end vývojář, který se o programování zajímá od 8. třídy. V současné době jsem v posledním ročníku střední školy se specializací vývoj aplikací."
+  },
   "header": {
     "home": "Domů",
     "work": "Projekty",
@@ -19,7 +21,8 @@
       "location": "Plzeň, Česká republika",
       "description": {
         "0": "Jsem 19letý český Front-end vývojář, který se o programování zajímá od 8. třídy.",
-        "1": "V současné době jsem v posledním ročníku střední školy se specializací vývoj aplikací."
+        "1": "Specializuji se na vývoj webových aplikací a v současné době pracuji na několika projektech, které vám rád ukážu.",
+        "2": "V současné době jsem v posledním ročníku střední školy se specializací vývoj aplikací."
       }
     },
     "skills": {
@@ -28,11 +31,13 @@
     },
     "work": {
       "title": "Práce & Projekty",
-      "description": "Zde jsou některé z projektů, na kterých jsem v minulosti pracoval."
+      "description": "Zde jsou některé z projektů, na kterých jsem v minulosti pracoval.",
+      "buttonText": "Zobrazit projekty"
     },
     "experience": {
       "title": "Zkušenosti",
-      "description": "Zde jsou některé z mých zkušeností v oblasti vývoje webových aplikací."
+      "description": "Zde jsou některé z mých zkušeností v oblasti vývoje webových aplikací.",
+      "buttonText": "Zobrazit zkušenosti"
     }
   },
   "footer": {
