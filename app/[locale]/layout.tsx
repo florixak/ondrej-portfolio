@@ -21,14 +21,35 @@ export async function generateMetadata({
     description:
       "Frontend developer with a passion for creating beautiful and functional web applications.",
     keywords: [
-      "frontend",
-      "developer",
-      "javascript",
-      "typescript",
-      "react",
-      "nextjs",
-      "tailwindcss",
+      // Role keywords
+      "frontend developer",
+      "frontend engineer",
+      "web developer",
+      // Technology keywords
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "TailwindCSS",
+      // Skill keywords
+      "responsive design",
+      "web accessibility",
+      "internationalization",
+      "UI/UX implementation",
+      "performance optimization",
+      // Specific combinations
+      "React frontend developer",
+      "Next.js specialist",
+      "Next.js entuhsiast",
+      "multilingual websites",
     ],
+    alternates: {
+      canonical: process.env.NEXT_PUBLIC_SITE_URL,
+      languages: {
+        "en-US": "/en",
+        "cs-CZ": "/cs",
+      },
+    },
     authors: [
       {
         name: "Ondřej Pták",
@@ -65,11 +86,20 @@ export async function generateMetadata({
 
   return {
     ...defaultMetadata,
-    title: messages?.title || defaultMetadata.title,
-    description: messages?.description || defaultMetadata.description,
+    title: messages?.metadata?.title || defaultMetadata.title,
+    description: messages?.metadata?.description || defaultMetadata.description,
     openGraph: {
       ...defaultMetadata.openGraph,
+      title: messages?.metadata?.title || defaultMetadata.title,
+      description:
+        messages?.metadata?.description || defaultMetadata.description,
       locale,
+    },
+    twitter: {
+      ...defaultMetadata.twitter,
+      title: messages?.metadata?.title || defaultMetadata.title,
+      description:
+        messages?.metadata?.description || defaultMetadata.description,
     },
   };
 }
