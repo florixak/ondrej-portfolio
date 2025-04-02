@@ -53,6 +53,7 @@ const LittleAbout = async () => {
       <ul className="flex flex-col gap-2 text-base list-disc list-outside ml-5">
         <li>{t("about.description.0")}</li>
         <li>{t("about.description.1")}</li>
+        <li>{t("about.description.2")}</li>
       </ul>
     </section>
   );
