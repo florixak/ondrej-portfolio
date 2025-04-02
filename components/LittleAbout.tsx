@@ -26,6 +26,7 @@ const contacts = [
 
 const LittleAbout = async () => {
   const t = await getTranslations("home");
+
   return (
     <section className="flex flex-col gap-4 p-4 rounded-lg border-foreground/20 border mx-auto max-w-2xl text-foreground">
       <div className="flex items-center sm:justify-between flex-wrap md:gap-0 gap-4 justify-center">
@@ -42,7 +43,7 @@ const LittleAbout = async () => {
               href={contact.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors duration-200 border border-foreground/20 rounded-md p-2 hover:bg-foreground/10"
+              className="text-muted-foreground hover:text-primary-green hover:shadow-sm hover:shadow-primary-green transition-colors duration-200 border border-foreground/20 rounded-md p-2 hover:bg-foreground/10"
             >
               {contact.icon}
             </a>
