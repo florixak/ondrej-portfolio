@@ -35,7 +35,7 @@ const LittleAbout = async () => {
             <MapPin /> {t("about.location")}
           </p>
         </div>
-        <div className="flex gap-4 scale-110 mr-5">
+        <div className="flex gap-4 scale-110 sm:mr-5">
           {contacts.map((contact) => (
             <a
               key={contact.name}
