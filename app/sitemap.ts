@@ -32,6 +32,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       };
     });
   });
-  console.log("sitemapEntries", JSON.stringify(sitemapEntries, null, 2));
   return sitemapEntries;
 }
