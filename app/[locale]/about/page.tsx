@@ -1,5 +1,26 @@
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return (
+    <section>
+      <h1>Let's talk about my journey</h1>
+      <div>
+        <p>
+          Everything started when I was 14 year old in elementary school, my
+          online friend created Minecraft server and he introduced me to the
+          world of programming. I was fascinated by how you could create your
+          own plugins and minigames. So I started learning Java, and I was
+          hooked in.
+        </p>
+        <p>
+          I instatly know what high school should I choose and what I want to do
+          in my future.
+        </p>
+        <p>
+          In high school I was introduced to web development. In the beginning I
+          did not understand how layout, media queries and more work.
+        </p>
+      </div>
+    </section>
+  );
 };
 
 export default AboutPage;
