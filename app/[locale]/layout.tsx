@@ -127,7 +127,7 @@ export default async function RootLayout({
             // disableTransitionOnChange
           >
             <Header />
-            <main className="min-h-screen flex flex-col my-24 mx-5 gap-10">
+            <main className="min-h-screen flex flex-col my-28 mx-5 gap-10">
               {children}
             </main>
             <Footer />
