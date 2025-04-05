@@ -1,8 +1,8 @@
 const AboutPage = () => {
   return (
-    <section>
+    <section className="flex-center flex-col gap-4 mt-10">
       <h1>Let's talk about my journey</h1>
-      <div>
+      <div className="flex flex-col gap-4 max-w-2xl border border-foreground/20 p-4 rounded-lg">
         <p>
           Everything started when I was 14 year old in elementary school, my
           online friend created Minecraft server and he introduced me to the
