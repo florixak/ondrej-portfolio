@@ -86,7 +86,7 @@ const ThemeSwitch = () => {
 
   return (
     <button
-      className="bg-background cursor-pointer"
+      className="bg-background cursor-pointer max-w-6"
       onClick={handleThemeChange}
     >
       <m.svg
