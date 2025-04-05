@@ -1,3 +1,4 @@
+import AnimationWrapper from "@/components/AnimationWrapper";
 import CardContent from "@/components/CardContent";
 import CardTilt from "@/components/CardTilt";
 import LittleAbout from "@/components/LittleAbout";
@@ -11,25 +12,35 @@ export default async function Home() {
 
   return (
     <>
-      <LittleAbout />
-      <Skills />
+      <AnimationWrapper>
+        <LittleAbout />
+      </AnimationWrapper>
+      <AnimationWrapper delay={0.2}>
+        <Skills />
+      </AnimationWrapper>
+
       <section className="flex gap-4 justify-center items-center mt-10 flex-wrap">
-        <CardTilt href="/work">
-          <CardContent
-            title={t("work.title")}
-            description={t("work.description")}
-            image={<CodeSquare className="card-image" />}
-            buttonText={t("work.buttonText")}
-          />
-        </CardTilt>
-        <CardTilt href="/experience">
-          <CardContent
-            title={t("experience.title")}
-            description={t("experience.description")}
-            image={<Briefcase className="card-image" />}
-            buttonText={t("experience.buttonText")}
-          />
-        </CardTilt>
+        <AnimationWrapper delay={0.4}>
+          <CardTilt href="/work">
+            <CardContent
+              title={t("work.title")}
+              description={t("work.description")}
+              image={<CodeSquare className="card-image" />}
+              buttonText={t("work.buttonText")}
+            />
+          </CardTilt>
+        </AnimationWrapper>
+
+        <AnimationWrapper delay={0.6}>
+          <CardTilt href="/experience">
+            <CardContent
+              title={t("experience.title")}
+              description={t("experience.description")}
+              image={<Briefcase className="card-image" />}
+              buttonText={t("experience.buttonText")}
+            />
+          </CardTilt>
+        </AnimationWrapper>
       </section>
     </>
   );
