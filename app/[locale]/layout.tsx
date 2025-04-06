@@ -22,9 +22,9 @@ export async function generateMetadata({
       "Frontend developer with a passion for creating beautiful and functional web applications.",
     keywords: [
       // Role keywords
-      "frontend developer",
-      "frontend engineer",
-      "web developer",
+      "Frontend developer",
+      "Frontend engineer",
+      "Web developer",
       // Technology keywords
       "React",
       "Next.js",
@@ -32,16 +32,16 @@ export async function generateMetadata({
       "JavaScript",
       "TailwindCSS",
       // Skill keywords
-      "responsive design",
-      "web accessibility",
-      "internationalization",
+      "Responsive design",
+      "Web accessibility",
+      "Internationalization",
       "UI/UX implementation",
-      "performance optimization",
+      "Performance optimization",
       // Specific combinations
       "React frontend developer",
       "Next.js specialist",
-      "Next.js entuhsiast",
-      "multilingual websites",
+      "Next.js enthusiast",
+      "Multilingual websites",
     ],
     alternates: {
       canonical: process.env.NEXT_PUBLIC_SITE_URL,
