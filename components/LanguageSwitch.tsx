@@ -3,8 +3,11 @@
 import { useLocale } from "next-intl";
 import React from "react";
 import { Button } from "./ui/button";
+import CSFlag from "../assets/cs-flag.svg";
+import USFlag from "../assets/us-flag.svg";
 
 import { usePathname, useRouter } from "@/i18n/routing";
+import Image from "next/image";
 
 const LanguageSwitch = () => {
   const locale = useLocale();
@@ -24,45 +27,21 @@ const LanguageSwitch = () => {
     >
       {locale === "en" ? (
         <span className="scale-125">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 16"
-            width="24"
-            height="16"
-          >
-            <rect width="24" height="8" fill="#fff" />
-            <rect y="8" width="24" height="8" fill="#d7141a" />
-            <path d="M0,0 L12,8 L0,16 Z" fill="#11457e" />
-          </svg>
+          <Image
+            src={CSFlag}
+            alt="Czech flag"
+            width={24}
+            height={24}
+          />
         </span>
       ) : (
         <span className="scale-125">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 16"
-            width="24"
-            height="16"
-          >
-            <rect width="24" height="16" fill="#fff" />
-            <rect y="0" width="24" height="1.23" fill="#b22234" />
-            <rect y="2.46" width="24" height="1.23" fill="#b22234" />
-            <rect y="4.92" width="24" height="1.23" fill="#b22234" />
-            <rect y="7.38" width="24" height="1.23" fill="#b22234" />
-            <rect y="9.85" width="24" height="1.23" fill="#b22234" />
-            <rect y="12.31" width="24" height="1.23" fill="#b22234" />
-            <rect y="14.77" width="24" height="1.23" fill="#b22234" />
-            <rect width="9.6" height="8.62" fill="#3c3b6e" />
-            {/* Simplified star pattern - 9 stars to represent the full 50 */}
-            <circle cx="1.6" cy="1.44" r="0.5" fill="white" />
-            <circle cx="4.8" cy="1.44" r="0.5" fill="white" />
-            <circle cx="8.0" cy="1.44" r="0.5" fill="white" />
-            <circle cx="1.6" cy="4.31" r="0.5" fill="white" />
-            <circle cx="4.8" cy="4.31" r="0.5" fill="white" />
-            <circle cx="8.0" cy="4.31" r="0.5" fill="white" />
-            <circle cx="1.6" cy="7.18" r="0.5" fill="white" />
-            <circle cx="4.8" cy="7.18" r="0.5" fill="white" />
-            <circle cx="8.0" cy="7.18" r="0.5" fill="white" />
-          </svg>
+          <Image
+            src={USFlag}
+            alt="US flag"
+            width={24}
+            height={24}
+          />
         </span>
       )}
     </Button>
