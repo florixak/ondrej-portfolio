@@ -23,26 +23,12 @@ const LanguageSwitch = () => {
     <Button
       onClick={handleLanguageChange}
       variant="ghost"
-      className="cursor-pointer"
+      className="cursor-pointer w-5 h-5 p-0"
     >
       {locale === "en" ? (
-        <span className="scale-125">
-          <Image
-            src={CSFlag}
-            alt="Czech flag"
-            width={24}
-            height={24}
-          />
-        </span>
+        <Image src={CSFlag} alt="Czech flag" width={24} height={24} />
       ) : (
-        <span className="scale-125">
-          <Image
-            src={USFlag}
-            alt="US flag"
-            width={24}
-            height={24}
-          />
-        </span>
+        <Image src={USFlag} alt="US flag" width={24} height={24} />
       )}
     </Button>
   );
