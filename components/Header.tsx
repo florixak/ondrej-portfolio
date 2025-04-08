@@ -32,10 +32,9 @@ const Header = async () => {
         {navLinks.map((link) => (
           <NavLink key={link.name} href={link.href} name={link.name} />
         ))}
-        <div className="flex items-center gap-4 w-[5rem]">
-          <LanguageSwitch />
-          <ThemeSwitch />
-        </div>
+
+        <LanguageSwitch />
+        <ThemeSwitch />
       </nav>
       <MobileNav navLinks={navLinks} />
     </header>
