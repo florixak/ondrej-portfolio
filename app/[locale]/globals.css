@@ -161,9 +161,36 @@
 
 @layer base {
   * {
-    @apply border-border /*outline outline-offset-2*/ transition-colors duration-200 ease-in-out;
+    @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  body,
+  header,
+  main,
+  footer,
+  article,
+  section,
+  div {
+    @apply transition-[background-color] duration-150 ease-in-out;
+  }
+
+  [class*="border"] {
+    @apply transition-[border-color] duration-200 ease-in-out;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span,
+  a {
+    transition: none;
   }
 }
