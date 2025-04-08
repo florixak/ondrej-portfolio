@@ -4,6 +4,8 @@ import { getTranslations } from "next-intl/server";
 import LanguageSwitch from "./LanguageSwitch";
 import NavLink from "./NavLink";
 import MobileNav from "./MobileNav";
+import CommandMenu from "./CommandMenu";
+import { SetStateAction } from "react";
 
 export type NavLink = {
   name: string;
@@ -32,6 +34,8 @@ const Header = async () => {
         {navLinks.map((link) => (
           <NavLink key={link.name} href={link.href} name={link.name} />
         ))}
+
+        <CommandMenu />
 
         <LanguageSwitch />
         <ThemeSwitch />
