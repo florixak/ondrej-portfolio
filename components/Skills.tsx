@@ -65,8 +65,8 @@ const Skills = () => {
   return (
     <section className="flex w-full flex-col items-center justify-center overflow-hidden max-w-2xl mx-auto">
       <h2 className="mb-8 text-2xl font-bold text-foreground">My Skills</h2>
-      <div className="relative w-full scale-125">
-        <Marquee pauseOnHover className="[--duration:25s]">
+      <div className="relative w-full space-y-2 overflow-hidden">
+        <Marquee pauseOnHover className="[--duration:25s] scale-125">
           {skillsFirst.map((skill) => (
             <img
               key={skill.id}
@@ -76,7 +76,7 @@ const Skills = () => {
             />
           ))}
         </Marquee>
-        <Marquee reverse pauseOnHover className="[--duration:25s]">
+        <Marquee reverse pauseOnHover className="[--duration:25s] scale-125">
           {skillsSecond.map((skill) => (
             <img
               key={skill.id}
@@ -87,8 +87,8 @@ const Skills = () => {
           ))}
         </Marquee>
 
-        <div className="pointer-events-none absolute inset-y-0 left-0 md:left-16 w-1/4 bg-gradient-to-r from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 md:right-16 w-1/4 bg-gradient-to-l from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 md:left-0 w-1/4 bg-gradient-to-r from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 md:right-0 w-1/4 bg-gradient-to-l from-background"></div>
       </div>
     </section>
   );
