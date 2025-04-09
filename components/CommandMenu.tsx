@@ -2,12 +2,19 @@
 
 import { Command } from "cmdk";
 import { useEffect, useState } from "react";
-import { FiEye, FiLink, FiLogOut, FiPhone, FiPlus } from "react-icons/fi";
+import { FiEye, FiLink, FiPhone, FiPlus } from "react-icons/fi";
 import * as Dialog from "@radix-ui/react-dialog";
+import { NavLink } from "./Header";
+import { useRouter } from "@/i18n/routing";
 
-const CommandMenu = () => {
+type CommandMenuProps = {
+  navLinks: NavLink[];
+};
+
+const CommandMenu = ({ navLinks }: CommandMenuProps) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
+  const router = useRouter();
 
   // Toggle the menu when ⌘K is pressed
   useEffect(() => {
@@ -49,29 +56,43 @@ const CommandMenu = () => {
             <span className="text-primary-green">"{value}"</span>
           </Command.Empty>
 
-          <Command.Group heading="Team" className="text-sm mb-3 text-stone-400">
-            <Command.Item className="flex cursor-pointer transition-colors p-2 text-sm text-foreground rounded items-center gap-2">
-              <FiPlus />
-              Invite Member
-            </Command.Item>
-            <Command.Item className="flex cursor-pointer transition-colors p-2 text-sm text-foreground rounded items-center gap-2">
-              <FiEye />
-              See Org Chart
-            </Command.Item>
+          <Command.Group
+            heading="Links"
+            className="text-sm mb-3 text-stone-400"
+          >
+            {navLinks.map((link) => (
+              <Command.Item
+                key={link.name}
+                className="flex cursor-pointer transition-colors p-2 text-sm text-foreground hover:bg-stone-200 rounded items-center gap-2"
+                onSelect={() => {
+                  router.push(link.href);
+                  setOpen(false);
+                }}
+              >
+                {link.name}
+              </Command.Item>
+            ))}
           </Command.Group>
 
           <Command.Group
-            heading="Integrations"
+            heading="Projects"
             className="text-sm text-stone-400 mb-3"
           >
-            <Command.Item className="flex cursor-pointer transition-colors p-2 text-sm text-stone-950 hover:bg-stone-200 rounded items-center gap-2">
-              <FiLink />
-              Link Services
-            </Command.Item>
-            <Command.Item className="flex cursor-pointer transition-colors p-2 text-sm text-stone-950 hover:bg-stone-200 rounded items-center gap-2">
-              <FiPhone />
-              Contact Support
-            </Command.Item>
+            {[
+              { name: "New Project", icon: FiPlus, href: "/work/new" },
+              { name: "View Projects", icon: FiEye, href: "/work" },
+            ].map((link) => (
+              <Command.Item
+                key={link.name}
+                className="flex cursor-pointer transition-colors p-2 text-sm text-foreground hover:bg-stone-200 rounded items-center gap-2"
+                onSelect={() => {
+                  router.push(link.href);
+                  setOpen(false);
+                }}
+              >
+                {link.name}
+              </Command.Item>
+            ))}
           </Command.Group>
         </Command.List>
       </div>

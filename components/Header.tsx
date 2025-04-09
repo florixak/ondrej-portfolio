@@ -5,14 +5,13 @@ import LanguageSwitch from "./LanguageSwitch";
 import NavLink from "./NavLink";
 import MobileNav from "./MobileNav";
 import CommandMenu from "./CommandMenu";
-import { SetStateAction } from "react";
 
 export type NavLink = {
   name: string;
   href: string;
 };
 
-const links = (t: any) => [
+const links = (t: any): NavLink[] => [
   { name: t("home"), href: "/" },
   { name: t("work"), href: "/work" },
   { name: t("experience"), href: "/experience" },
@@ -35,7 +34,7 @@ const Header = async () => {
           <NavLink key={link.name} href={link.href} name={link.name} />
         ))}
 
-        <CommandMenu />
+        <CommandMenu navLinks={navLinks} />
 
         <LanguageSwitch />
         <ThemeSwitch />
