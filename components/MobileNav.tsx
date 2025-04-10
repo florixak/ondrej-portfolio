@@ -27,7 +27,12 @@ const MobileNav = ({ navLinks }: MobileNavProps) => {
         }`}
       >
         {navLinks.map((link) => (
-          <NavLink key={link.name} name={link.name} href={link.href} />
+          <NavLink
+            key={link.name}
+            name={link.name}
+            href={link.href}
+            onClick={handleOpenMenu}
+          />
         ))}
       </div>
     </nav>
