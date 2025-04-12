@@ -8,9 +8,15 @@ type TiltCardProps = {
   children: React.ReactNode;
   href?: string;
   className?: string;
+  disableTilt?: boolean;
 };
 
-const CardTilt = ({ children, href, className }: TiltCardProps) => {
+const CardTilt = ({
+  children,
+  href,
+  className,
+  disableTilt,
+}: TiltCardProps) => {
   const [transformStyle, setTransformStyle] = useState<string | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -30,6 +36,7 @@ const CardTilt = ({ children, href, className }: TiltCardProps) => {
       y: relativeY * 100,
     });
 
+    if (disableTilt) return;
     const tiltX = (relativeX - 0.5) * 7;
     const tiltY = (relativeY - 0.5) * -7;
     const newTransform = `perspective(1000px) rotateX(${tiltY}deg) rotateY(${tiltX}deg) scale3d(1, 1, 1)`;
@@ -70,9 +77,13 @@ const CardTilt = ({ children, href, className }: TiltCardProps) => {
             : "none",
         }}
       />
-      <Link href={href || "#"} className="h-full w-full z-20">
-        {children}
-      </Link>
+      {href ? (
+        <Link href={href} className="h-full w-full z-20">
+          {children}
+        </Link>
+      ) : (
+        <div className="h-full w-full z-20">{children}</div>
+      )}
     </article>
   );
 };
