@@ -5,6 +5,7 @@ import ThemeSwitch from "./ThemeSwitch";
 import MobileNavButton from "./MobileNavButton";
 import { useState } from "react";
 import NavLink from "./NavLink";
+import LanguageSwitch from "./LanguageSwitch";
 
 type MobileNavProps = {
   navLinks: NavLinkType[];
@@ -18,8 +19,12 @@ const MobileNav = ({ navLinks }: MobileNavProps) => {
   };
 
   return (
-    <nav className="md:hidden flex gap-4 items-center">
-      <ThemeSwitch />
+    <nav className="md:hidden flex gap-2 items-center">
+      <div className="gap-6 flex items-center">
+        <LanguageSwitch />
+        <ThemeSwitch />
+      </div>
+
       <MobileNavButton handleOpenMenu={handleOpenMenu} />
       <div
         className={`fixed top-0 left-0 h-screen w-full bg-background text-foreground flex flex-col items-center justify-center gap-4 z-50 transition-transform duration-300 ${
