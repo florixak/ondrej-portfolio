@@ -1,0 +1,63 @@
+"use server";
+
+import { Project } from "@/types/types";
+import BuffetImage from "@/assets/buffet.png";
+import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+
+const projects = (t: any): Project[] => [
+  {
+    id: "1",
+    title: t("buffet.title"),
+    description: t("buffet.description"),
+    detailedDescription: t("buffet.detailedDescription"),
+    technologies: ["React", "TypeScript", "TailwindCSS"],
+    featured: true,
+    url: "https://buffet.vlastas.cc/",
+    image: BuffetImage,
+    github: "https://github.com/Web-Projekty/buffet-rezervace",
+    createdAt: "2024-09-13",
+  },
+];
+
+export const getProjects = async ({
+  featured = false,
+  technology = "",
+  limit = 0,
+}: {
+  featured?: boolean;
+  technology?: string;
+  limit?: number;
+}) => {
+  const t = await getTranslations("projects");
+  let filteredProjects = [...projects(t)];
+
+  if (featured) {
+    filteredProjects = filteredProjects.filter((project) => project.featured);
+  }
+
+  if (technology) {
+    filteredProjects = filteredProjects.filter((project) =>
+      project.technologies.some(
+        (tech) => tech.toLowerCase() === technology.toLowerCase()
+      )
+    );
+  }
+
+  if (limit > 0) {
+    filteredProjects = filteredProjects.slice(0, limit);
+  }
+
+  return filteredProjects;
+};
+
+export const getProjectById = async (id: string) => {
+  const t = await getTranslations("projects");
+  const project = projects(t).find((project) => project.id === id);
+
+  if (!project) {
+    notFound();
+  }
+
+  return project;
+};
