@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return routing.locales.map((locale) => {
       const url = `${baseUrl}/${locale}${cleanRoute ? `/${cleanRoute}` : ""}`;
 
-      // Build alternates using a more functional approach
       const alternateLanguages = Object.fromEntries(
         routing.locales
           .filter((altLocale) => altLocale !== locale)
