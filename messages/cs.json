@@ -44,11 +44,18 @@
     "text": "Vytvořeno s ❤ Ondřejem v Plzni"
   },
   "projects": {
+    "title": "Projekty",
+    "description": "Zde jsou některé z projektů, na kterých jsem v minulosti pracoval.",
     "buttonText": "Zobrazit detaily",
+    "featured": {
+      "title": "Vybrané projekty",
+      "description": "Zde jsou některé z projektů, na kterých jsem v minulosti pracoval.",
+      "buttonText": "Zobrazit více"
+    },
     "buffet": {
       "title": "SPŠE a VOŠ | Buffet rezervace",
       "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025.",
-      "detailedDescription": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na SPŠE a VOŠ 2024/2025. Umožňuje uživatelům procházet menu, přidávat položky do košíku a provádět objednávky.Správci mohou spravovat menu, objednávky a uživatelské účty."
+      "detailedDescription": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl vytvořen v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025. Umožňuje uživatelům procházet menu, přidávat položky do košíku a provádět objednávky. Správci mohou spravovat menu, objednávky."
     }
   }
 }

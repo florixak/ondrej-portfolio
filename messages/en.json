@@ -44,11 +44,18 @@
     "text": "Made with ❤ by Ondřej in Pilsen"
   },
   "projects": {
+    "title": "Ondřej Pták | Projects",
+    "description": "Here are some of the projects I have worked on in the past.",
     "buttonText": "View details",
+    "featured": {
+      "title": "Featured projects",
+      "description": "Here are some of the projects I have worked on in the past.",
+      "buttonText": "View more"
+    },
     "buffet": {
       "title": "SPŠE a VOŠ | Buffet reservation",
       "description": "I created the entire frontend for the meal reservation system in the school buffet. The project was part of the graduation project at SPŠE and VOŠ in Pilsen 2024/2025.",
-      "detailedDescription": "I created the entire frontend for the meal reservation system in the school buffet. The project was part of the graduation project at SPŠE and VOŠ 2024/2025. It allows users to browse the menu, add items to the cart, and place orders. Administrators can manage the menu, orders, and user accounts."
+      "detailedDescription": "I created the entire frontend for the meal reservation system in the school buffet. The project was created as part of the graduation project at SPŠE and VOŠ in Pilsen 2024/2025. It allows users to browse the menu, add items to the cart, and place orders. Administrators can manage the menu, orders."
     }
   }
 }
