@@ -1,5 +1,22 @@
 import { getProjectById } from "@/actions/actions";
-import React from "react";
+import ProjectButtons from "@/components/ProjectButtons";
+import ProjectImages from "@/components/ProjectImages";
+import { getTranslations } from "next-intl/server";
+import Image from "next/image";
+
+export const generateMetadata = async ({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) => {
+  const { id } = await params;
+  const project = await getProjectById(id);
+  const t = await getTranslations("metadata");
+  return {
+    title: `${t("title").split("F")[0]} ${project.title}`,
+    description: project.description,
+  };
+};
 
 const WorkInfoPage = async ({
   params,
@@ -12,19 +29,24 @@ const WorkInfoPage = async ({
   return (
     <section>
       <div className="flex-center flex-col gap-4 p-4">
-        <h2 className="text-2xl font-bold text-foreground">{project.title}</h2>
-        <p className="mt-2 text-sm">{project.description}</p>
-        <p className="mt-2 text-sm">
-          Technologies: {project.technologies.join(", ")}
+        <div className="flex flex-col text-center">
+          <h2 className="text-2xl font-bold text-foreground">
+            {project.title}
+          </h2>
+          <p className="mt-2 text-sm">{project.technologies.join(", ")}</p>
+          <p className="text-sm text-muted-foreground">{project.createdAt}</p>
+        </div>
+        <ProjectImages images={project.images} />
+        {/* <Image
+          src={project.image}
+          alt={project.title}
+          className="object-cover rounded-lg max-w-3xl w-full group-hover:scale-105 transition-transform duration-300 ease-in-out shadow-lg"
+        /> */}
+        <p className="mt-2 text-base max-w-2xl">
+          {project.detailedDescription}
         </p>
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 underline"
-        >
-          View on GitHub
-        </a>
+
+        <ProjectButtons project={project} />
       </div>
     </section>
   );
