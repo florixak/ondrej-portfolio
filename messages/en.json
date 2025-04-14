@@ -1,7 +1,11 @@
 {
   "metadata": {
     "title": "Ondřej Pták | Fullstack developer",
-    "description": "I specialize in designing and building modern, responsive web applications that deliver exceptional user experiences and drive business growth."
+    "description": "I specialize in designing and building modern, responsive web applications that deliver exceptional user experiences and drive business growth.",
+    "workTitle": "Ondřej Pták | Projects",
+    "experienceTitle": "Ondřej Pták | Experience",
+    "aboutTitle": "Ondřej Pták | About me",
+    "contactTitle": "Ondřej Pták | Contact"
   },
   "header": {
     "home": "Home",
@@ -47,6 +51,11 @@
     "title": "Ondřej Pták | Projects",
     "description": "Here are some of the projects I have worked on in the past.",
     "buttonText": "View details",
+    "swipeImage": "Swipe to see more images",
+    "links": {
+      "github": "GitHub",
+      "live": "Live demo"
+    },
     "featured": {
       "title": "Featured projects",
       "description": "Here are some of the projects I have worked on in the past.",

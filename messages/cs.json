@@ -1,7 +1,11 @@
 {
   "metadata": {
     "title": "Ondřej Pták | Fullstack vývojář",
-    "description": "Specializuji se na navrhování a vytváření moderních, responzivních webových aplikací, které poskytují výjimečné uživatelské zkušenosti a podporují obchodní růst."
+    "description": "Specializuji se na navrhování a vytváření moderních, responzivních webových aplikací, které poskytují výjimečné uživatelské zkušenosti a podporují obchodní růst.",
+    "workTitle": "Ondřej Pták | Projekty",
+    "experienceTitle": "Ondřej Pták | Zkušenosti",
+    "aboutTitle": "Ondřej Pták | O mně",
+    "contactTitle": "Ondřej Pták | Kontakt"
   },
   "header": {
     "home": "Domů",
@@ -47,6 +51,11 @@
     "title": "Projekty",
     "description": "Zde jsou některé z projektů, na kterých jsem v minulosti pracoval.",
     "buttonText": "Zobrazit detaily",
+    "swipeImage": "Přejeďte pro zobrazení více obrázků",
+    "links": {
+      "github": "GitHub",
+      "live": "Živá ukázka"
+    },
     "featured": {
       "title": "Vybrané projekty",
       "description": "Zde jsou některé z projektů, na kterých jsem v minulosti pracoval.",
