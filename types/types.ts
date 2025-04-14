@@ -10,7 +10,7 @@ export type Project = {
   technologies: string[];
   featured?: boolean;
   url?: string;
-  images: string[] | StaticImport[] | StaticImageData[];
+  images: string[] | StaticImport[];
   github: string;
   createdAt?: string;
   lastUpdated?: string;
