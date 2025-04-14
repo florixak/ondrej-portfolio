@@ -2,6 +2,15 @@ import { getProjects } from "@/actions/actions";
 import AnimationWrapper from "@/components/AnimationWrapper";
 import Project from "@/components/Project";
 import { Project as ProjectType } from "@/types/types";
+import { getTranslations } from "next-intl/server";
+
+export const generateMetadata = async () => {
+  const tMeta = await getTranslations("metadata");
+  const tWork = await getTranslations("projects");
+  return {
+    title: `${tMeta("title").split("F")[0]} ${tWork("title")}`,
+  };
+};
 
 const WorkPage = async () => {
   const projects: ProjectType[] = await getProjects({});
