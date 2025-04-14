@@ -15,15 +15,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
 
-  // Define default metadata
   const defaultMetadata: Metadata = {
-    title: "Ondřej Pták | Frontend Developer",
+    title: "Ondřej Pták | Fullstack Developer",
     description:
-      "Frontend developer with a passion for creating beautiful and functional web applications.",
+      "Fullstack developer with a passion for creating beautiful and functional web applications.",
     keywords: [
       // Role keywords
-      "Frontend developer",
-      "Frontend engineer",
+      "Fullstack developer",
+      "Fullstack engineer",
       "Web developer",
       // Technology keywords
       "React",
@@ -58,16 +57,16 @@ export async function generateMetadata({
     ],
     creator: "Ondřej Pták",
     openGraph: {
-      title: "Ondřej Pták | Frontend Developer",
+      title: "Ondřej Pták | Fullstack Developer",
       description: "",
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      siteName: "Ondřej Pták | Frontend Developer",
+      siteName: "Ondřej Pták | Fullstack Developer",
       locale: locale,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: "Ondřej Pták | Frontend Developer",
+      title: "Ondřej Pták | Fullstack Developer",
       description: "",
       creator: "@florixak",
     },
@@ -75,6 +74,14 @@ export async function generateMetadata({
       icon: "/favicon.ico",
       shortcut: "/favicon.ico",
       apple: "/apple-touch-icon.png",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
     },
   };
 
