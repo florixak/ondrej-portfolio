@@ -4,12 +4,14 @@ import { StaticImageData } from "next/image";
 export type Project = {
   id: string;
   title: string;
+  translationTitle: string;
   description: string;
   detailedDescription: string;
   technologies: string[];
   featured?: boolean;
   url?: string;
-  image: string | StaticImport | StaticImageData;
+  images: string[] | StaticImport[] | StaticImageData[];
   github: string;
   createdAt?: string;
+  lastUpdated?: string;
 };
