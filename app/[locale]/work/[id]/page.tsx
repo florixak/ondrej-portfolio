@@ -1,6 +1,6 @@
 import { getProjectById } from "@/actions/actions";
-import ProjectButtons from "@/components/ProjectButtons";
-import ProjectImages from "@/components/ProjectImages";
+import ProjectButtons from "@/components/project/ProjectButtons";
+import ProjectImages from "@/components/project/ProjectImages";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
@@ -29,24 +29,30 @@ const WorkInfoPage = async ({
   return (
     <section>
       <div className="flex-center flex-col gap-4 p-4">
-        <div className="flex flex-col text-center">
+        <div className="flex flex-col text-center gap-1">
           <h2 className="text-2xl font-bold text-foreground">
             {project.title}
           </h2>
-          <p className="mt-2 text-sm">{project.technologies.join(", ")}</p>
-          <p className="text-sm text-muted-foreground">{project.createdAt}</p>
+          <ul className="flex justify-center gap-2 flex-wrap">
+            {project.technologies.map((technology) => (
+              <li
+                key={technology}
+                className="text-sm bg-muted px-2 py-1 rounded-md"
+              >
+                {technology}
+              </li>
+            ))}
+          </ul>
+          <p className="text-sm text-muted-foreground">
+            {project.createdAt
+              ? new Date(project.createdAt).toLocaleDateString()
+              : null}
+          </p>
         </div>
         <ProjectImages images={project.images} />
-        {/* <Image
-          src={project.image}
-          alt={project.title}
-          className="object-cover rounded-lg max-w-3xl w-full group-hover:scale-105 transition-transform duration-300 ease-in-out shadow-lg"
-        /> */}
-        <p className="mt-2 text-base max-w-2xl">
-          {project.detailedDescription}
-        </p>
 
         <ProjectButtons project={project} />
+        <p className=" text-base max-w-2xl">{project.detailedDescription}</p>
       </div>
     </section>
   );
