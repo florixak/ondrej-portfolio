@@ -1,3 +1,12 @@
+import { getTranslations } from "next-intl/server";
+
+export const generateMetadata = async () => {
+  const tMeta = await getTranslations("metadata");
+  return {
+    title: `${tMeta("aboutTitle")}`,
+  };
+};
+
 const AboutPage = () => {
   return (
     <section className="flex-center flex-col gap-4 mt-10">
