@@ -1,7 +1,7 @@
 import AnimationWrapper from "@/components/AnimationWrapper";
 import CardContent from "@/components/CardContent";
 import CardTilt from "@/components/CardTilt";
-import FeaturedProjects from "@/components/FeaturedProjects";
+import FeaturedProjects from "@/components/project/FeaturedProjects";
 import LittleAbout from "@/components/LittleAbout";
 import Skills from "@/components/Skills";
 import { Briefcase, CodeSquare } from "lucide-react";
