@@ -9,14 +9,16 @@ const projects = (t: any): Project[] => [
   {
     id: "1",
     title: t("buffet.title"),
+    translationTitle: "buffet",
     description: t("buffet.description"),
     detailedDescription: t("buffet.detailedDescription"),
     technologies: ["React", "TypeScript", "TailwindCSS"],
     featured: true,
     url: "https://buffet.vlastas.cc/",
-    image: BuffetImage,
+    images: [BuffetImage],
     github: "https://github.com/Web-Projekty/buffet-rezervace",
     createdAt: "2024-09-13",
+    lastUpdated: "2024-09-13",
   },
 ];
 
