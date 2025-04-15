@@ -1,6 +1,7 @@
 import { getProjectById } from "@/actions/actions";
 import ProjectButtons from "@/components/project/ProjectButtons";
 import ProjectImages from "@/components/project/ProjectImages";
+import Technology from "@/components/Technology";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
@@ -35,12 +36,7 @@ const WorkInfoPage = async ({
           </h2>
           <ul className="flex justify-center gap-2 flex-wrap">
             {project.technologies.map((technology) => (
-              <li
-                key={technology}
-                className="text-sm bg-muted px-2 py-1 rounded-md"
-              >
-                {technology}
-              </li>
+              <Technology key={technology} technology={technology} />
             ))}
           </ul>
           <p className="text-sm text-muted-foreground">
