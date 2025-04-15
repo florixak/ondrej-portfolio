@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Ondřej Pták | Fullstack vývojář",
+    "title": "Ondřej Pták | Frontend vývojář",
     "description": "Specializuji se na navrhování a vytváření moderních, responzivních webových aplikací, které poskytují výjimečné uživatelské zkušenosti a podporují obchodní růst.",
     "workTitle": "Ondřej Pták | Projekty",
     "experienceTitle": "Ondřej Pták | Zkušenosti",
@@ -24,9 +24,9 @@
       "title": "Ondřej Pták",
       "location": "Plzeň, Česká republika",
       "description": {
-        "0": "Jsem 19letý český Fullstack vývojář, který se o programování zajímá od 8. třídy.",
-        "1": "Specializuji se na vývoj webových aplikací a v současné době pracuji na několika projektech, které vám rád ukážu.",
-        "2": "V současné době jsem v posledním ročníku střední školy se specializací vývoj aplikací."
+        "0": "Jsem 19letý český Frontend vývojář, který se o programování zajímá od 8. třídy.",
+        "1": "Specializuji se na vývoj frontendu webových aplikací a v současné době pracuji na několika projektech, které vám rád ukážu.",
+        "2": "Jako frontend vývojář mám i zkušenosti s backendem, což mi umožňuje lépe porozumět celému procesu vývoje aplikací."
       }
     },
     "skills": {
