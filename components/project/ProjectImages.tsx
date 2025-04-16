@@ -2,6 +2,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { getTranslations } from "next-intl/server";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
@@ -29,8 +31,8 @@ const ProjectImages = async ({ images }: ProjectImagesProps) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      {/* <CarouselPrevious />
-      <CarouselNext /> */}
+      <CarouselPrevious className="cursor-pointer hidden md:flex" />
+      <CarouselNext className="cursor-pointer hidden md:flex" />
 
       <p className="flex justify-center text-sm text-muted-foreground">
         {t("swipeImage")}
