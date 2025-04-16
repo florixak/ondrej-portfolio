@@ -11,7 +11,7 @@ const FeaturedProjects = async () => {
   });
 
   return (
-    <section className="flex-center flex-col gap-4 p-4">
+    <section className="flex-center flex-col gap-4">
       <div className="text-center flex-col gap-4">
         <h2 className="text-2xl font-bold text-foreground">
           {t("featured.title")}
