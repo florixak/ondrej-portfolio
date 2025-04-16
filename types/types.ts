@@ -1,5 +1,5 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import { StaticImageData } from "next/image";
+import { JSX } from "react";
 
 export type Project = {
   id: string;
@@ -14,4 +14,13 @@ export type Project = {
   github: string;
   createdAt?: string;
   lastUpdated?: string;
+};
+
+export type Experience = {
+  id: string;
+  date: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  icon: JSX.Element;
 };
