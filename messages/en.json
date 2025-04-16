@@ -72,9 +72,9 @@
     "description": "Here are some of my experiences in web application development.",
     "education": {
       "highschool": {
-        "title": "SPŠE a VOŠ Plzeň",
-        "subtitle": "Student",
-        "description": "I am currently studying at the Secondary School of Economics and Business Administration in Pilsen, where I am gaining knowledge in programming and web development. I am also working on my graduation project, which focuses on creating a meal reservation system for the school buffet."
+        "title": "VOŠ a SPŠE Plzeň",
+        "subtitle": "Highschool, IT field with a focus on Application Development",
+        "description": "I am currently studying at the VOŠ a SPŠE Plzeň, where I am gaining knowledge in programming and web development. I am also working on my graduation project, which focuses on creating a meal reservation system for the school buffet."
       }
     },
     "ownprojects": {

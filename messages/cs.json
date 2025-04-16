@@ -72,9 +72,9 @@
     "description": "Zde jsou některé z mých zkušeností v oblasti vývoje webových aplikací.",
     "education": {
       "highschool": {
-        "title": "SPŠE a VOŠ Plzeň",
-        "subtitle": "Student",
-        "description": "Jsem studentem SPŠE a VOŠ v Plzni, kde se specializuji na vývoj webových aplikací. V rámci studia jsem se naučil různé technologie a nástroje, které mi pomáhají při vývoji moderních webových aplikací."
+        "title": "VOŠ a SPŠE Plzeň",
+        "subtitle": "Střední škola, obor IT se zaměřením na Vývoj aplikací",
+        "description": "V současné době studuji VOŠ a SPŠE Plzeň, kde získávám znalosti v programování a vývoji webu. Dále pracuji na svém absolventském projektu, který se zaměřuje na vytvoření rezervačního systému jídel pro školní bufet"
       }
     },
     "ownprojects": {
