@@ -25,7 +25,7 @@ const Project = ({ project }: ProjectProps) => {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 rounded-lg transition-opacity duration-300 ease-in-out" />
 
-      <div className="gap-4 p-4 absolute -translate-y-34 group-hover:-translate-y-46 flex flex-col items-start justify-center rounded-b-lg transition-transform duration-300 ease-in-out text-white">
+      <div className="gap-4 p-4 absolute -translate-y-56 md:-translate-y-34 group-hover:-translate-y-46 flex flex-col items-start justify-center rounded-b-lg transition-transform duration-300 ease-in-out text-white">
         <div className="flex flex-col h-full">
           <h3 className="text-xl font-semibold">{project.title}</h3>
           <ul className="flex gap-2 flex-wrap mt-2">
@@ -38,7 +38,7 @@ const Project = ({ project }: ProjectProps) => {
           </p>
         </div>
 
-        <Button className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer">
+        <Button className="md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out cursor-pointer">
           {t("buttonText")}
         </Button>
       </div>
