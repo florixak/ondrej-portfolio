@@ -66,5 +66,28 @@
       "description": "I created the entire frontend for the meal reservation system in the school buffet. The project was part of the graduation project at SPŠE and VOŠ in Pilsen 2024/2025.",
       "detailedDescription": "I created the entire frontend for the meal reservation system in the school buffet. The project was created as part of the graduation project at SPŠE and VOŠ in Pilsen 2024/2025. It allows users to browse the menu, add items to the cart, and place orders. Administrators can manage the menu, orders."
     }
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "Here are some of my experiences in web application development.",
+    "education": {
+      "highschool": {
+        "title": "SPŠE a VOŠ Plzeň",
+        "subtitle": "Student",
+        "description": "I am currently studying at the Secondary School of Economics and Business Administration in Pilsen, where I am gaining knowledge in programming and web development. I am also working on my graduation project, which focuses on creating a meal reservation system for the school buffet."
+      }
+    },
+    "ownprojects": {
+      "title": "Personal Projects",
+      "subtitle": "Frontend/Fullstack Developer",
+      "description": "I work as a freelance frontend developer, where I participate in various projects. I have experience in developing web applications that include both frontend and backend."
+    },
+    "projects": {
+      "buffet": {
+        "title": "SPŠE a VOŠ | Buffet reservation",
+        "subtitle": "Graduation project",
+        "description": "I created the entire frontend for the meal reservation system in the school buffet. The project was part of the graduation project at SPŠE and VOŠ in Pilsen 2024/2025."
+      }
+    }
   }
 }

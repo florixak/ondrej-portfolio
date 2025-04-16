@@ -66,5 +66,28 @@
       "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025.",
       "detailedDescription": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl vytvořen v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025. Umožňuje uživatelům procházet menu, přidávat položky do košíku a provádět objednávky. Správci mohou spravovat menu, objednávky."
     }
+  },
+  "experience": {
+    "title": "Zkušenosti",
+    "description": "Zde jsou některé z mých zkušeností v oblasti vývoje webových aplikací.",
+    "education": {
+      "highschool": {
+        "title": "SPŠE a VOŠ Plzeň",
+        "subtitle": "Student",
+        "description": "Jsem studentem SPŠE a VOŠ v Plzni, kde se specializuji na vývoj webových aplikací. V rámci studia jsem se naučil různé technologie a nástroje, které mi pomáhají při vývoji moderních webových aplikací."
+      }
+    },
+    "ownprojects": {
+      "title": "Vlastní projekty",
+      "subtitle": "Frontend/Fullstack vývojář",
+      "description": "Pracuji jako freelance frontend vývojář, kde se podílím na různých projektech. Mám zkušenosti s vývojem webových aplikací, které zahrnují jak frontend, tak backend."
+    },
+    "projects": {
+      "buffet": {
+        "title": "SPŠE a VOŠ | Buffet rezervace",
+        "subtitle": "Maturitní projekt",
+        "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025."
+      }
+    }
   }
 }
