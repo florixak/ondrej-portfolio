@@ -7,6 +7,7 @@ import { Locale, routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export async function generateMetadata({
   params,
@@ -133,6 +134,7 @@ export default async function RootLayout({
             enableSystem
             // disableTransitionOnChange
           >
+            <ScrollToTop />
             <Header />
             <main className="min-h-screen flex flex-col my-28 mx-5 gap-10">
               {children}
