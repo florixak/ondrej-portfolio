@@ -20,7 +20,7 @@ export default async function Home() {
         <Skills />
       </AnimationWrapper>
 
-      <section className="flex gap-4 justify-center items-center mt-10 flex-wrap">
+      <section className="flex gap-4 justify-center items-center flex-wrap">
         <AnimationWrapper delay={0.4}>
           <CardTilt href="/work">
             <CardContent
