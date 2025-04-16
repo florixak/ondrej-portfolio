@@ -1,5 +1,6 @@
+import { getExperience } from "@/actions/actions";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
 import { getTranslations } from "next-intl/server";
-import React from "react";
 
 export const generateMetadata = async () => {
   const tMeta = await getTranslations("metadata");
@@ -8,8 +9,10 @@ export const generateMetadata = async () => {
   };
 };
 
-const ExperiencePage = () => {
-  return <div>ExperiencePage</div>;
+const ExperiencePage = async () => {
+  const expierence = await getExperience();
+
+  return <ExperienceTimeline experience={expierence} />;
 };
 
 export default ExperiencePage;
