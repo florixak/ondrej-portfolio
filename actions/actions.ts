@@ -18,7 +18,16 @@ const projects = (t: any): Project[] => [
     translationTitle: "buffet",
     description: t("buffet.description"),
     detailedDescription: t("buffet.detailedDescription"),
-    technologies: ["React", "TypeScript", "TailwindCSS"],
+    technologies: [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Vite",
+      "Axios",
+      "Zustand",
+      "React Router",
+      "React Query",
+    ],
     featured: true,
     url: "https://buffet.vlastas.cc/",
     images: [
