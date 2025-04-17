@@ -3,15 +3,15 @@ import CardTilt from "../CardTilt";
 import { Project as ProjectType } from "@/types/types";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { useTranslations } from "next-intl";
 import Technology from "../Technology";
+import { getTranslations } from "next-intl/server";
 
 type ProjectProps = {
   project: ProjectType;
 };
 
-const Project = ({ project }: ProjectProps) => {
-  const t = useTranslations("projects");
+const Project = async ({ project }: ProjectProps) => {
+  const t = await getTranslations("projects");
   return (
     <CardTilt
       disableTilt
@@ -29,9 +29,10 @@ const Project = ({ project }: ProjectProps) => {
         <div className="flex flex-col h-full">
           <h3 className="text-xl font-semibold">{project.title}</h3>
           <ul className="flex gap-2 flex-wrap mt-2">
-            {project.technologies.map((technology) => (
+            {project.technologies.splice(0, 3).map((technology) => (
               <Technology key={technology} technology={technology} />
             ))}
+            <Technology technology={t("moreTech")} />
           </ul>
           <p className="mt-2 text-sm dark:text-muted-foreground text-white">
             {project.description}
