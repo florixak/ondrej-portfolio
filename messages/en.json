@@ -45,12 +45,13 @@
     }
   },
   "footer": {
-    "text": "Made with ❤ in Pilsen"
+    "text": "Made with ❤ in the Czech Republic"
   },
   "projects": {
     "title": "Ondřej Pták | Projects",
     "description": "Here are some of the projects I have worked on in the past.",
     "buttonText": "View details",
+    "moreTech": "And more...",
     "swipeImage": "Swipe to see more images",
     "links": {
       "github": "GitHub",
@@ -62,9 +63,9 @@
       "buttonText": "View more"
     },
     "buffet": {
-      "title": "SPŠE a VOŠ | Buffet reservation",
+      "title": "VOŠ a SPŠE | Buffet reservation",
       "description": "I created the entire frontend for the meal reservation system in the school buffet. The project was part of the graduation project at SPŠE and VOŠ in Pilsen 2024/2025.",
-      "detailedDescription": "I created the entire frontend for the meal reservation system in the school buffet. The project was created as part of the graduation project at SPŠE and VOŠ in Pilsen 2024/2025. It allows users to browse the menu, add items to the cart, and place orders. Administrators can manage the menu, orders."
+      "detailedDescription": "I created the entire frontend for the school buffet meal reservation system. The project was created as part of the graduation project at the SPŠE and VOŠ in Pilsen 2024/2025. It allows users to browse the menu, add items to the cart, and place orders. Administrators can manage the menu, orders. I created the frontend in React with TailwindCSS. The backend was created in PHP by my classmate. The application communicates with the backend via REST API."
     }
   },
   "experience": {
@@ -84,7 +85,7 @@
     },
     "projects": {
       "buffet": {
-        "title": "SPŠE a VOŠ | Buffet reservation",
+        "title": "VOŠ a SPŠE | Buffet reservation",
         "subtitle": "Graduation project",
         "description": "I created the entire frontend for the meal reservation system in the school buffet. The project was part of the graduation project at SPŠE and VOŠ in Pilsen 2024/2025."
       }

@@ -45,12 +45,13 @@
     }
   },
   "footer": {
-    "text": "Vytvořeno s ❤ Plzni"
+    "text": "Vytvořeno s ❤ v České republice"
   },
   "projects": {
     "title": "Projekty",
     "description": "Zde jsou některé z projektů, na kterých jsem v minulosti pracoval.",
     "buttonText": "Zobrazit detaily",
+    "moreTech": "A více...",
     "swipeImage": "Přejeďte pro zobrazení více obrázků",
     "links": {
       "github": "GitHub",
@@ -62,9 +63,9 @@
       "buttonText": "Zobrazit více"
     },
     "buffet": {
-      "title": "SPŠE a VOŠ | Buffet rezervace",
+      "title": "VOŠ a SPŠE | Buffet rezervace",
       "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025.",
-      "detailedDescription": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl vytvořen v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025. Umožňuje uživatelům procházet menu, přidávat položky do košíku a provádět objednávky. Správci mohou spravovat menu, objednávky."
+      "detailedDescription": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl vytvořen v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025. Umožňuje uživatelům procházet menu, přidávat položky do košíku a provádět objednávky. Správci mohou spravovat menu, objednávky. Frontend jsem vytvořil v Reactu s TailwindCSS. Backend byl vytvořen v PHP mým spolužákem. Aplikace komunikuje s backendem přes REST API."
     }
   },
   "experience": {
@@ -84,7 +85,7 @@
     },
     "projects": {
       "buffet": {
-        "title": "SPŠE a VOŠ | Buffet rezervace",
+        "title": "VOŠ a SPŠE | Buffet rezervace",
         "subtitle": "Maturitní projekt",
         "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025."
       }
