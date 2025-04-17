@@ -1,9 +1,8 @@
-import { getProjectById } from "@/actions/actions";
+import { getProjectById, getProjects } from "@/actions/actions";
 import ProjectButtons from "@/components/project/ProjectButtons";
 import ProjectImages from "@/components/project/ProjectImages";
 import Technology from "@/components/Technology";
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
 
 export const generateMetadata = async ({
   params,
@@ -17,6 +16,11 @@ export const generateMetadata = async ({
     title: `${t("title").split("F")[0]} ${project.title}`,
     description: project.description,
   };
+};
+
+export const generateStaticParams = async () => {
+  const projects = await getProjects({});
+  return projects.map((project) => ({ id: project.id }));
 };
 
 const WorkInfoPage = async ({
