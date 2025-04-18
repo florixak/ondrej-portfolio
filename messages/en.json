@@ -3,6 +3,7 @@
     "title": "Ondřej Pták | Frontend developer",
     "description": "I specialize in designing and building modern, responsive web applications that deliver exceptional user experiences and drive business growth.",
     "workTitle": "Ondřej Pták | Projects",
+    "projectTitle": "Ondřej Pták | ",
     "experienceTitle": "Ondřej Pták | Experience",
     "aboutTitle": "Ondřej Pták | About me",
     "contactTitle": "Ondřej Pták | Contact"
@@ -65,7 +66,7 @@
     "buffet": {
       "title": "VOŠ a SPŠE | Buffet reservation",
       "description": "I created the entire frontend for the meal reservation system in the school buffet. The project was part of the graduation project at SPŠE and VOŠ in Pilsen 2024/2025.",
-      "detailedDescription": "I created the entire frontend for the school buffet meal reservation system. The project was created as part of the graduation project at the SPŠE and VOŠ in Pilsen 2024/2025. It allows users to browse the menu, add items to the cart, and place orders. Administrators can manage the menu, orders. I created the frontend in React with TailwindCSS. The backend was created in PHP by my classmate. The application communicates with the backend via REST API."
+      "detailedDescription": "I created the entire frontend for the school buffet meal reservation system. The project was created as part of the graduation project at the SPŠE and VOŠ in Pilsen 2024/2025. It allows users to browse the menu, add items to the cart, and place orders. Administrators can manage the menu, orders. I created the frontend in React with TailwindCSS. The backend was written in PHP by my classmate. The application communicates with the backend via REST API."
     }
   },
   "experience": {

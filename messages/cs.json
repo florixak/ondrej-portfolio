@@ -3,6 +3,7 @@
     "title": "Ondřej Pták | Frontend vývojář",
     "description": "Specializuji se na navrhování a vytváření moderních, responzivních webových aplikací, které poskytují výjimečné uživatelské zkušenosti a podporují obchodní růst.",
     "workTitle": "Ondřej Pták | Projekty",
+    "projectTitle": "Ondřej Pták | ",
     "experienceTitle": "Ondřej Pták | Zkušenosti",
     "aboutTitle": "Ondřej Pták | O mně",
     "contactTitle": "Ondřej Pták | Kontakt"
@@ -65,7 +66,7 @@
     "buffet": {
       "title": "VOŠ a SPŠE | Buffet rezervace",
       "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025.",
-      "detailedDescription": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl vytvořen v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025. Umožňuje uživatelům procházet menu, přidávat položky do košíku a provádět objednávky. Správci mohou spravovat menu, objednávky. Frontend jsem vytvořil v Reactu s TailwindCSS. Backend byl vytvořen v PHP mým spolužákem. Aplikace komunikuje s backendem přes REST API."
+      "detailedDescription": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl vytvořen v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025. Umožňuje uživatelům procházet menu, přidávat položky do košíku a provádět objednávky. Správci mohou spravovat menu, objednávky. Frontend jsem vytvořil v Reactu s TailwindCSS. Backend byl napsán v PHP mým spolužákem. Aplikace komunikuje s backendem přes REST API."
     }
   },
   "experience": {
