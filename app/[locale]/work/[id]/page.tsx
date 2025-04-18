@@ -1,4 +1,4 @@
-import { getProjectById, getProjects } from "@/actions/actions";
+import { getProjectById } from "@/actions/actions";
 import ProjectButtons from "@/components/project/ProjectButtons";
 import ProjectImages from "@/components/project/ProjectImages";
 import Technology from "@/components/Technology";
@@ -13,15 +13,15 @@ export const generateMetadata = async ({
   const project = await getProjectById(id);
   const t = await getTranslations("metadata");
   return {
-    title: `${t("title").split("F")[0]} ${project.title}`,
+    title: `${t("projectTitle")} ${project.title}`,
     description: project.description,
   };
 };
 
-export const generateStaticParams = async () => {
-  const projects = await getProjects({});
-  return projects.map((project) => ({ id: project.id }));
-};
+// export const generateStaticParams = async () => {
+//   const projects = await getProjects({});
+//   return projects.map((project) => ({ id: project.id }));
+// };
 
 const WorkInfoPage = async ({
   params,
