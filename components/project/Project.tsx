@@ -34,7 +34,7 @@ const Project = async ({ project }: ProjectProps) => {
             ))}
             <Technology technology={t("moreTech")} />
           </ul>
-          <p className="mt-2 text-sm dark:text-muted-foreground text-white">
+          <p className="mt-2 text-sm dark:text-muted-foreground text-white line-clamp-2">
             {project.description}
           </p>
         </div>
