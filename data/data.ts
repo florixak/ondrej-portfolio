@@ -4,7 +4,6 @@ import BuffetImage3 from "@/assets/buffet/buffet3.png";
 import BuffetImage4 from "@/assets/buffet/buffet4.png";
 import BuffetImage5 from "@/assets/buffet/buffet5.png";
 import BuffetImage6 from "@/assets/buffet/buffet6.png";
-import BuffetImage7 from "@/assets/buffet/buffet7.png";
 import { Project, Experience } from "@/types/types";
 import { Star, School } from "lucide-react";
 import React from "react";
@@ -35,7 +34,6 @@ export const projects = (t: any): Project[] => [
       BuffetImage4,
       BuffetImage5,
       BuffetImage6,
-      BuffetImage7,
     ],
     github: "https://github.com/Web-Projekty/buffet-rezervace",
     createdAt: "2024-09-13",
