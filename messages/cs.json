@@ -1,4 +1,16 @@
 {
+  "common": {
+    "loading": {
+      "title": "Načítání...",
+      "description": ""
+    },
+    "error": "Nastala chyba. Zkuste to prosím znovu.",
+    "notFound": {
+      "title": "404",
+      "description": "Stránka, kterou hledáte, neexistuje.",
+      "buttonText": "Zpět na domovskou stránku"
+    }
+  },
   "metadata": {
     "title": "Ondřej Pták | Frontend vývojář",
     "description": "Specializuji se na navrhování a vytváření moderních, responzivních webových aplikací, které poskytují výjimečné uživatelské zkušenosti a podporují obchodní růst.",
@@ -88,7 +100,7 @@
       "buffet": {
         "title": "VOŠ a SPŠE | Buffet rezervace",
         "subtitle": "Maturitní projekt",
-        "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025."
+        "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na VOŠ a SPŠE Plzeň 2024/2025."
       }
     }
   }
