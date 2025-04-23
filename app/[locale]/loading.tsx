@@ -1,5 +1,3 @@
-import { getTranslations } from "next-intl/server";
-
 const Loading = () => {
   return (
     <div className="flex-center flex-col w-full h-[50vh] p-4 text-center">
