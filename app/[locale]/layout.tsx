@@ -8,6 +8,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import ScrollToTop from "@/components/ScrollToTop";
+import PageTransition from "@/components/PageTransition";
 
 export async function generateMetadata({
   params,
@@ -136,9 +137,11 @@ export default async function RootLayout({
           >
             <ScrollToTop />
             <Header />
-            <main className="min-h-screen flex flex-col my-28 mx-5 gap-10">
-              {children}
-            </main>
+            <PageTransition key={locale}>
+              <main className="min-h-screen flex flex-col my-28 mx-5 gap-10">
+                {children}
+              </main>
+            </PageTransition>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
