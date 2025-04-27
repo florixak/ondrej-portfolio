@@ -15,9 +15,10 @@ type ProjectImagesProps = {
 
 const ProjectImages = async ({ images }: ProjectImagesProps) => {
   const t = await getTranslations("projects");
+
   return (
     <Carousel
-      className="w-full max-w-3xl rounded-lg cursor-grabbng"
+      className="w-full max-w-3xl rounded-lg cursor-grabbing"
       opts={{ loop: true }}
     >
       <CarouselContent>
