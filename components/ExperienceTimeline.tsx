@@ -8,6 +8,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { useTheme } from "next-themes";
 import { Experience } from "@/types/types";
 import { Suspense, useEffect, useState } from "react";
+import Loading from "@/app/[locale]/loading";
 
 type ExperienceTimelineProps = {
   experience: Experience[];
@@ -33,7 +34,7 @@ const ExperienceTimeline = ({ experience }: ExperienceTimelineProps) => {
   }
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loading />}>
       <VerticalTimeline lineColor={lineColor}>
         {experience.map((exp) => (
           <VerticalTimelineElement

@@ -52,7 +52,7 @@ export const experience = (t: any): Experience[] => [
   },
   {
     id: "2",
-    date: "2021 - present",
+    date: "2021 - 2025",
     title: t("education.highschool.title"),
     subtitle: t("education.highschool.subtitle"),
     description: t("education.highschool.description"),
