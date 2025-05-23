@@ -8,6 +8,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import ScrollToTop from "@/components/ScrollToTop";
+import OfflineBanner from "@/components/OfflineBanner";
 
 export async function generateMetadata({
   params,
@@ -136,6 +137,7 @@ export default async function RootLayout({
           >
             <ScrollToTop />
             <Header />
+            <OfflineBanner />
             <main className="min-h-screen flex flex-col my-28 mx-5 gap-10">
               {children}
             </main>
