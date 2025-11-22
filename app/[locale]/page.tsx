@@ -2,7 +2,7 @@ import AnimationWrapper from "@/components/AnimationWrapper";
 import CardContent from "@/components/CardContent";
 import CardTilt from "@/components/CardTilt";
 import FeaturedProjects from "@/components/project/FeaturedProjects";
-import LittleAbout from "@/components/LittleAbout";
+import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import { Briefcase, CodeSquare } from "lucide-react";
 
@@ -13,14 +13,12 @@ export default async function Home() {
 
   return (
     <>
-      <AnimationWrapper>
-        <LittleAbout />
-      </AnimationWrapper>
+      <Hero />
       <AnimationWrapper delay={0.2}>
         <Skills />
       </AnimationWrapper>
 
-      <section className="flex gap-4 justify-center items-center flex-wrap">
+      <section className="flex gap-4 justify-center items-center flex-wrap mt-8">
         <AnimationWrapper delay={0.4}>
           <CardTilt href="/work">
             <CardContent
