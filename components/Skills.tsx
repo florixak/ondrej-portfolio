@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { Marquee } from "./magicui/marquee";
 
 const skills = [
@@ -61,10 +62,15 @@ const skills = [
 const skillsFirst = skills.slice(0, Math.ceil(skills.length / 2));
 const skillsSecond = skills.slice(Math.ceil(skills.length / 2), skills.length);
 
-const Skills = () => {
+const Skills = async () => {
+  const t = await getTranslations("home.skills");
+
   return (
     <section className="flex w-full flex-col items-center justify-center overflow-hidden max-w-2xl mx-auto">
-      <h2 className="mb-8 text-2xl font-bold text-foreground">My Skills</h2>
+      <div className="text-center flex-col gap-4">
+        <h2 className="text-2xl font-bold text-foreground">{t("title")}</h2>
+        <p className="mt-2 text-sm text-muted-foreground">{t("description")}</p>
+      </div>
       <div className="relative w-full space-y-2 overflow-hidden">
         <Marquee pauseOnHover className="[--duration:25s] scale-125">
           {skillsFirst.map((skill) => (
