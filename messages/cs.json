@@ -12,7 +12,7 @@
     }
   },
   "metadata": {
-    "title": "Ondřej Pták | Frontend vývojář",
+    "title": "Ondřej Pták | Fullstack vývojář",
     "description": "Specializuji se na navrhování a vytváření moderních, responzivních webových aplikací, které poskytují výjimečné uživatelské zkušenosti a podporují obchodní růst.",
     "workTitle": "Ondřej Pták | Projekty",
     "projectTitle": "Ondřej Pták | ",
@@ -37,8 +37,8 @@
       "title": "Ondřej Pták",
       "location": "Plzeň, Česká republika",
       "description": {
-        "0": "Jsem 19letý český Frontend vývojář, který se specializuje na vytváření moderních a responzivních webových aplikací.",
-        "1": "Jako frontend vývojář mám i zkušenosti s backendem, což mi umožňuje lépe porozumět celému procesu vývoje aplikací.",
+        "0": "Jsem 20-letý český Fullstack vývojář, který se specializuje na vytváření moderních a responzivních webových aplikací.",
+        "1": "Mám i zkušenosti s backendem, což mi umožňuje lépe porozumět celému procesu vývoje aplikací.",
         "2": "V současné době pracuji na několika projektech, které vám rád ukážu."
       }
     },
@@ -79,6 +79,11 @@
       "title": "VOŠ a SPŠE | Buffet rezervace",
       "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025.",
       "detailedDescription": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl vytvořen v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025. Umožňuje uživatelům procházet menu, přidávat položky do košíku a provádět objednávky. Správci mohou spravovat menu, objednávky. Frontend jsem vytvořil v Reactu s TailwindCSS. Backend byl napsán v PHP mým spolužákem. Aplikace komunikuje s backendem přes REST API."
+    },
+    "pixelverse": {
+      "title": "PixelVerse | Komunitní platforma pro pixelové umělce",
+      "description": "Vytvořil jsem moderní komunitní platformu pro pixelové umělce, která umožňuje sdílet tvorbu, komentovat příspěvky a objevovat nová díla v rámci pixel art komunity.",
+      "detailedDescription": "Vytvořil jsem moderní komunitní platformu pro pixelové umělce, která umožňuje sdílet tvorbu, komentovat příspěvky a objevovat nová díla v rámci pixel art komunity. Projekt byl navržen s důrazem na škálovatelnost, čistý design a plynulou uživatelskou zkušenost napříč zařízeními. Aplikace obsahuje systém uživatelských profilů, komentářů, hodnocení a achievementů, a díky integraci s Clerk a Sanity.io poskytuje bezpečnou autentizaci a správu obsahu."
     }
   },
   "experience": {
@@ -89,12 +94,17 @@
         "title": "VOŠ a SPŠE Plzeň",
         "subtitle": "Maturita s vyznamenáním | Vývoj aplikací a webových stránek",
         "description": "Studoval jsem na VOŠ a SPŠE Plzeň, kde získávám znalosti v programování a vývoji webu. Dále pracuji na svém absolventském projektu, který se zaměřuje na vytvoření rezervačního systému jídel pro školní bufet"
+      },
+      "university": {
+        "title": "Fakulta aplikovaných věd - Západočeská univerzita v Plzni",
+        "subtitle": "Studium | Software Engineering",
+        "description": "Studoval jsem na VOŠ a SPŠE Plzeň, kde získávám znalosti v programování a vývoji webu. Dále pracuji na svém absolventském projektu, který se zaměřuje na vytvoření rezervačního systému jídel pro školní bufet"
       }
     },
     "ownprojects": {
       "title": "Vlastní projekty",
-      "subtitle": "Frontend/Fullstack vývojář",
-      "description": "Pracuji jako freelance frontend vývojář, kde se podílím na různých projektech. Mám zkušenosti s vývojem webových aplikací, které zahrnují jak frontend, tak backend."
+      "subtitle": "Fullstack vývojář",
+      "description": "Pracuji jako freelance Fullstack vývojář, kde se podílím na různých projektech. Mám zkušenosti s vývojem webových aplikací, které zahrnují jak frontend, tak backend."
     },
     "projects": {
       "buffet": {
