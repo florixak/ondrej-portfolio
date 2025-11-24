@@ -98,7 +98,7 @@
       "university": {
         "title": "Fakulta aplikovaných věd - Západočeská univerzita v Plzni",
         "subtitle": "Studium | Software Engineering",
-        "description": "Studoval jsem na VOŠ a SPŠE Plzeň, kde získávám znalosti v programování a vývoji webu. Dále pracuji na svém absolventském projektu, který se zaměřuje na vytvoření rezervačního systému jídel pro školní bufet"
+        "description": "Momentálně studuji 1. ročník na Fakultě aplikovaných věd program Softwarové inženýrství"
       }
     },
     "ownprojects": {
@@ -111,6 +111,11 @@
         "title": "VOŠ a SPŠE | Buffet rezervace",
         "subtitle": "Maturitní projekt",
         "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na VOŠ a SPŠE Plzeň 2024/2025."
+      },
+      "pixelverse": {
+        "title": "PixelVerse | Komunitní platforma pro pixelové umělce",
+        "subtitle": "Personal project",
+        "description": "I created a modern community platform for pixel artists, which allows users to share their art, comment on posts and discover new works within the pixel art community. The project was designed with scalability in mind, clean design and smooth user experience across devices. The application includes user profile system, comments, ratings and achievements, and thanks to integration with Clerk and Sanity.io provides secure authentication and content management."
       }
     }
   }
