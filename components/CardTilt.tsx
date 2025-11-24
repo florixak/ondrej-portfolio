@@ -4,6 +4,9 @@ import { cn } from "@/lib/utils";
 import React, { useRef, useState } from "react";
 import { Link } from "@/i18n/routing";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 type TiltCardProps = {
   children: React.ReactNode;
   href?: string;
@@ -21,6 +24,7 @@ const CardTilt = ({
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const itemRef = useRef<HTMLDivElement>(null);
+  const { contextSafe } = useGSAP({ scope: itemRef });
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!itemRef.current) return;
@@ -43,9 +47,27 @@ const CardTilt = ({
     setTransformStyle(newTransform);
   };
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = contextSafe(() => {
     setIsHovering(true);
-  };
+    // Subtle "ninja precision" effect
+    // Quick, sharp rotation and slight scale, then back
+    gsap.to(".card-image", {
+      rotation: 15,
+      scale: 1.1,
+      duration: 0.1,
+      ease: "power2.out",
+      yoyo: true,
+      repeat: 1,
+      onComplete: () => {
+        gsap.to(".card-image", {
+          rotation: 0,
+          scale: 1,
+          duration: 0.2,
+          ease: "power2.inOut",
+        });
+      },
+    });
+  });
 
   const handleMouseLeave = () => {
     setIsHovering(false);
