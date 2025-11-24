@@ -24,7 +24,6 @@ const CardTilt = ({
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const itemRef = useRef<HTMLDivElement>(null);
-  const { contextSafe } = useGSAP({ scope: itemRef });
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!itemRef.current) return;
