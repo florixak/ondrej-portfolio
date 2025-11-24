@@ -47,28 +47,6 @@ const CardTilt = ({
     setTransformStyle(newTransform);
   };
 
-  const handleMouseEnter = contextSafe(() => {
-    setIsHovering(true);
-    // Subtle "ninja precision" effect
-    // Quick, sharp rotation and slight scale, then back
-    gsap.to(".card-image", {
-      rotation: 15,
-      scale: 1.1,
-      duration: 0.1,
-      ease: "power2.out",
-      yoyo: true,
-      repeat: 1,
-      onComplete: () => {
-        gsap.to(".card-image", {
-          rotation: 0,
-          scale: 1,
-          duration: 0.2,
-          ease: "power2.inOut",
-        });
-      },
-    });
-  });
-
   const handleMouseLeave = () => {
     setIsHovering(false);
     setTransformStyle("");
@@ -82,7 +60,6 @@ const CardTilt = ({
         className
       )}
       onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
         transform: transformStyle || undefined,
