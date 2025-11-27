@@ -4,6 +4,16 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { skills } from "@/data/data";
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 const item = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 },
@@ -41,6 +51,7 @@ const Skills = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
+            variants={container}
             className="flex flex-col gap-4 bg-background p-6 rounded-2xl border border-border shadow-md"
           >
             <div className="flex items-center gap-2 mb-2">
