@@ -6,6 +6,7 @@ import NavLink from "./NavLink";
 import MobileNav from "./MobileNav";
 import CommandMenu from "./CommandMenu";
 import { Kbd, KbdGroup } from "./ui/kbd";
+import KbdInfo from "./kbd-info";
 
 export type NavLink = {
   name: string;
@@ -31,11 +32,7 @@ const Header = async () => {
         <p className="text-sm text-muted-foreground">Ondřej Pták</p>
       </Link>
       <nav className="md:flex gap-8 items-center hidden">
-        <KbdGroup>
-          <Kbd>{process.platform === "darwin" ? "⌘" : "Ctrl"}</Kbd>
-          <span>+</span>
-          <Kbd>K</Kbd>
-        </KbdGroup>
+        <KbdInfo />
 
         {navLinks.map((link) => (
           <NavLink key={link.name} href={link.href} name={link.name} />
