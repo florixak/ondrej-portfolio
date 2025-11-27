@@ -29,17 +29,20 @@ const ShojiPanel = ({
 
   const handleMouseEnter = contextSafe(() => {
     gsap.to(".door-left", {
+      scope: containerRef,
       xPercent: -100,
       duration: 0.6,
       ease: "power3.inOut",
     });
     gsap.to(".door-right", {
+      scope: containerRef,
       xPercent: 100,
       duration: 0.6,
       ease: "power3.inOut",
     });
 
     gsap.to(".cover-content", {
+      scope: containerRef,
       opacity: 0,
       scale: 0.9,
       duration: 0.4,
@@ -49,23 +52,33 @@ const ShojiPanel = ({
     gsap.fromTo(
       ".inner-content",
       { opacity: 0, y: 10 },
-      { opacity: 1, y: 0, duration: 0.5, delay: 0.2, ease: "power2.out" }
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        delay: 0.2,
+        ease: "power2.out",
+        scope: containerRef,
+      }
     );
   });
 
   const handleMouseLeave = contextSafe(() => {
     gsap.to(".door-left", {
+      scope: containerRef,
       xPercent: 0,
       duration: 0.5,
       ease: "power3.inOut",
     });
     gsap.to(".door-right", {
+      scope: containerRef,
       xPercent: 0,
       duration: 0.5,
       ease: "power3.inOut",
     });
 
     gsap.to(".cover-content", {
+      scope: containerRef,
       opacity: 1,
       scale: 1,
       duration: 0.4,
@@ -74,6 +87,7 @@ const ShojiPanel = ({
     });
 
     gsap.to(".inner-content", {
+      scope: containerRef,
       opacity: 0,
       y: 10,
       duration: 0.3,
@@ -85,7 +99,7 @@ const ShojiPanel = ({
     <div
       ref={containerRef}
       className={cn(
-        "relative w-[20rem] h-[20rem] md:h-[23rem] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer bg-background border border-foreground/10",
+        "relative w-88 h-88 md:h-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer bg-background border border-foreground/10",
         className
       )}
       onMouseEnter={handleMouseEnter}
