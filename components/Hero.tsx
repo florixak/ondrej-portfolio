@@ -83,6 +83,7 @@ const Hero = () => {
       });
 
       gsap.to(".floating-shape", {
+        y: 10,
         duration: 3,
         repeat: -1,
         yoyo: true,
