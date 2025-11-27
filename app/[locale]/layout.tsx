@@ -138,7 +138,7 @@ export default async function RootLayout({
             <ScrollToTop />
             <Header />
             <OfflineBanner />
-            <main className="min-h-screen flex flex-col my-28 mx-5 gap-10">
+            <main className="min-h-screen flex flex-col mt-28 gap-10">
               {children}
             </main>
             <Footer />
