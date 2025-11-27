@@ -5,7 +5,7 @@ import BuffetImage4 from "@/assets/buffet/buffet4.png";
 import BuffetImage5 from "@/assets/buffet/buffet5.png";
 import BuffetImage6 from "@/assets/buffet/buffet6.png";
 import { Project, Experience } from "@/types/types";
-import { Star, School, Github, Mail, Linkedin, Instagram } from "lucide-react";
+import { Star, School, Github, Mail, Linkedin } from "lucide-react";
 import React from "react";
 
 export const projects = (t: any): Project[] => [
