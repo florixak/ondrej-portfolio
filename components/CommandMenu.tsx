@@ -90,7 +90,6 @@ const CommandMenu = ({ navLinks }: CommandMenuProps) => {
                 key={project.id}
                 className={`${itemStyle} data-[selected=true]:bg-primary-green/20 data-[selected=true]:text-primary-green`}
                 onSelect={() => {
-                  if (!project.url) return;
                   router.push(`/work/${project.id}`);
                   setOpen(false);
                 }}
