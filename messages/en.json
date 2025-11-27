@@ -9,6 +9,15 @@
       "title": "404",
       "description": "The page you are looking for does not exist.",
       "buttonText": "Go to homepage"
+    },
+    "commandMenu": {
+      "title": "Command Menu",
+      "placeholder": "What do you need to find?",
+      "subtitles": {
+        "links": "Links",
+        "projects": "Projects"
+      },
+      "noResults": "No results found for \"{value}\""
     }
   },
   "metadata": {
@@ -81,9 +90,9 @@
       "detailedDescription": "I created the entire frontend for the school buffet meal reservation system. The project was created as part of the graduation project at the SPŠE and VOŠ in Pilsen 2024/2025. It allows users to browse the menu, add items to the cart, and place orders. Administrators can manage the menu, orders. I created the frontend in React with TailwindCSS. The backend was written in PHP by my classmate. The application communicates with the backend via REST API."
     },
     "pixelverse": {
-      "title": "PixelVerse | Komunitní platforma pro pixelové umělce",
-      "description": "Vytvořil jsem moderní komunitní platformu pro pixelové umělce, která umožňuje sdílet tvorbu, komentovat příspěvky a objevovat nová díla v rámci pixel art komunity.",
-      "detailedDescription": "Vytvořil jsem moderní komunitní platformu pro pixelové umělce, která umožňuje sdílet tvorbu, komentovat příspěvky a objevovat nová díla v rámci pixel art komunity. Projekt byl navržen s důrazem na škálovatelnost, čistý design a plynulou uživatelskou zkušenost napříč zařízeními. Aplikace obsahuje systém uživatelských profilů, komentářů, hodnocení a achievementů, a díky integraci s Clerk a Sanity.io poskytuje bezpečnou autentizaci a správu obsahu."
+      "title": "PixelVerse | Community platform for pixel artists",
+      "description": "I created a modern community platform for pixel artists that allows sharing creations, commenting on posts, and discovering new works within the pixel art community.",
+      "detailedDescription": "I created a modern community platform for pixel artists that allows sharing creations, commenting on posts, and discovering new works within the pixel art community. The project was designed with an emphasis on scalability, clean design, and smooth user experience across devices. The application includes a system of user profiles, comments, ratings, and achievements, and thanks to integration with Clerk and Sanity.io, it provides secure authentication and content management."
     }
   },
   "experience": {
@@ -103,7 +112,7 @@
     },
     "ownprojects": {
       "title": "Personal Projects",
-      "subtitle": "Frontend/Fullstack Developer",
+      "subtitle": "Fullstack Developer",
       "description": "I work as a freelance frontend developer, where I participate in various projects. I have experience in developing web applications that include both frontend and backend."
     },
     "projects": {

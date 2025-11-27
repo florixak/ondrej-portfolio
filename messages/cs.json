@@ -9,6 +9,15 @@
       "title": "404",
       "description": "Stránka, kterou hledáte, neexistuje.",
       "buttonText": "Zpět na domovskou stránku"
+    },
+    "commandMenu": {
+      "title": "Komandové menu",
+      "placeholder": "Co potřebujete najít?",
+      "subtitles": {
+        "links": "Odkazy",
+        "projects": "Projekty"
+      },
+      "noResults": "Nebyly nalezeny žádné výsledky pro \"{value}\""
     }
   },
   "metadata": {
@@ -114,8 +123,8 @@
       },
       "pixelverse": {
         "title": "PixelVerse | Komunitní platforma pro pixelové umělce",
-        "subtitle": "Personal project",
-        "description": "I created a modern community platform for pixel artists, which allows users to share their art, comment on posts and discover new works within the pixel art community. The project was designed with scalability in mind, clean design and smooth user experience across devices. The application includes user profile system, comments, ratings and achievements, and thanks to integration with Clerk and Sanity.io provides secure authentication and content management."
+        "subtitle": "Osobní projekt",
+        "description": "Vytvořil jsem moderní komunitní platformu pro pixelové umělce, která umožňuje sdílet tvorbu, komentovat příspěvky a objevovat nová díla v rámci pixel art komunity. Projekt byl navržen s důrazem na škálovatelnost, čistý design a plynulou uživatelskou zkušenost napříč zařízeními. Aplikace obsahuje systém uživatelských profilů, komentářů, hodnocení a achievementů, a díky integraci s Clerk a Sanity.io poskytuje bezpečnou autentizaci a správu obsahu."
       }
     }
   }
