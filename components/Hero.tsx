@@ -83,8 +83,6 @@ const Hero = () => {
       });
 
       gsap.to(".floating-shape", {
-        y: "random(-20, 20)",
-        x: "random(-20, 20)",
         duration: 3,
         repeat: -1,
         yoyo: true,
@@ -184,7 +182,7 @@ const Hero = () => {
               className="contact-icon p-3 rounded-full border border-foreground/10 hover:border-primary-green hover:bg-primary-green/10 hover:text-primary-green transition-colors duration-300"
               aria-label={contact.name}
             >
-              {<contact.icon className="w-6 h-6" />}
+              <contact.icon className="w-6 h-6" />
             </a>
           ))}
         </div>
