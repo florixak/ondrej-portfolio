@@ -26,22 +26,22 @@ const Skills = () => {
   const t = useTranslations("home.skills");
 
   return (
-    <section className="flex w-full flex-col items-center justify-center max-w-5xl mx-auto py-10 px-4">
-      <div className="text-center flex-col gap-4 mb-12">
+    <section className="flex w-full flex-col items-center justify-center py-10 px-4 bg-secondary min-h-[60vh]">
+      <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-foreground">{t("title")}</h2>
         <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
           {t("description")}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-        {skills.map((category, idx) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl mx-auto">
+        {skills.map((category) => (
           <motion.div
             key={category.category}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-4 bg-background p-6 rounded-2xl border border-border shadow-md"
           >
             <div className="flex items-center gap-2 mb-2">
               <h3 className="text-xl font-semibold">{category.category}</h3>
