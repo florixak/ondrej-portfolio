@@ -5,7 +5,6 @@ import LanguageSwitch from "./LanguageSwitch";
 import NavLink from "./NavLink";
 import MobileNav from "./MobileNav";
 import CommandMenu from "./CommandMenu";
-import { Kbd, KbdGroup } from "./ui/kbd";
 import KbdInfo from "./kbd-info";
 
 export type NavLink = {
@@ -18,6 +17,7 @@ const links = (t: any): NavLink[] => [
   { name: t("work"), href: "/work" },
   { name: t("experience"), href: "/experience" },
   { name: t("about"), href: "/about" },
+  { name: t("contact"), href: "/contact" },
 ];
 
 const Header = async () => {
@@ -37,7 +37,6 @@ const Header = async () => {
         {navLinks.map((link) => (
           <NavLink key={link.name} href={link.href} name={link.name} />
         ))}
-
         <CommandMenu navLinks={navLinks} />
 
         <LanguageSwitch />
