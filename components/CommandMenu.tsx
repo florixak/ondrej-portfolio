@@ -2,10 +2,11 @@
 
 import { Command } from "cmdk";
 import { useEffect, useState } from "react";
-import { FiEye, FiLink, FiPhone, FiPlus } from "react-icons/fi";
-import * as Dialog from "@radix-ui/react-dialog";
 import { NavLink } from "./Header";
 import { useRouter } from "@/i18n/routing";
+import { projects } from "@/data/data";
+import { useTranslations } from "next-intl";
+import { Title } from "@radix-ui/react-dialog";
 
 type CommandMenuProps = {
   navLinks: NavLink[];
@@ -15,8 +16,9 @@ const CommandMenu = ({ navLinks }: CommandMenuProps) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
   const router = useRouter();
+  const cmdTranslations = useTranslations("common.commandMenu");
+  const projectsTranslations = useTranslations("projects");
 
-  // Toggle the menu when ⌘K is pressed
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
@@ -29,12 +31,17 @@ const CommandMenu = ({ navLinks }: CommandMenuProps) => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
+  const itemStyle =
+    "flex cursor-pointer transition-colors p-2 text-sm text-foreground hover:bg-stone-200/10 rounded items-center gap-2";
+
+  const translatedProjects = projects(projectsTranslations);
+
   return (
     <Command.Dialog
       open={open}
       onOpenChange={setOpen}
       label="Global Command Menu"
-      className="fixed inset-0 bg-stone-950/50"
+      className="fixed inset-0 backdrop-blur-sm z-50 flex items-start px-4"
       onClick={() => setOpen(false)}
       title="Global Command Menu"
     >
@@ -42,28 +49,28 @@ const CommandMenu = ({ navLinks }: CommandMenuProps) => {
         onClick={(e) => e.stopPropagation()}
         className="bg-background rounded-lg shadow-xl border-background border overflow-hidden w-full max-w-lg mx-auto mt-32"
       >
-        <Dialog.Title className="sr-only">Command Menu</Dialog.Title>
+        <Title className="sr-only">{cmdTranslations("title")}</Title>
 
         <Command.Input
+          autoFocus
           value={value}
           onValueChange={setValue}
-          placeholder="What do you need?"
-          className="relative border-b border-stone-300 p-3 text-lg w-full placeholder:text-stone-400 focus:outline-none"
+          placeholder={cmdTranslations("placeholder")}
+          className="relative border-b border-primary-green p-3 text-lg w-full placeholder:text-stone-400 focus:outline-none"
         />
         <Command.List className="p-3">
           <Command.Empty>
-            No results found for{" "}
-            <span className="text-primary-green">"{value}"</span>
+            {cmdTranslations("noResults", { value })}
           </Command.Empty>
 
           <Command.Group
-            heading="Links"
+            heading={cmdTranslations("subtitles.links")}
             className="text-sm mb-3 text-stone-400"
           >
             {navLinks.map((link) => (
               <Command.Item
                 key={link.name}
-                className="flex cursor-pointer transition-colors p-2 text-sm text-foreground hover:bg-stone-200 rounded items-center gap-2"
+                className={`${itemStyle} data-[selected=true]:bg-primary-green/20 data-[selected=true]:text-primary-green`}
                 onSelect={() => {
                   router.push(link.href);
                   setOpen(false);
@@ -75,22 +82,19 @@ const CommandMenu = ({ navLinks }: CommandMenuProps) => {
           </Command.Group>
 
           <Command.Group
-            heading="Projects"
+            heading={cmdTranslations("subtitles.projects")}
             className="text-sm text-stone-400 mb-3"
           >
-            {[
-              { name: "New Project", icon: FiPlus, href: "/work/new" },
-              { name: "View Projects", icon: FiEye, href: "/work" },
-            ].map((link) => (
+            {translatedProjects.map((project) => (
               <Command.Item
-                key={link.name}
-                className="flex cursor-pointer transition-colors p-2 text-sm text-foreground hover:bg-stone-200 rounded items-center gap-2"
+                key={project.id}
+                className={`${itemStyle} data-[selected=true]:bg-primary-green/20 data-[selected=true]:text-primary-green`}
                 onSelect={() => {
-                  router.push(link.href);
+                  router.push(`/work/${project.id}`);
                   setOpen(false);
                 }}
               >
-                {link.name}
+                {project.title}
               </Command.Item>
             ))}
           </Command.Group>

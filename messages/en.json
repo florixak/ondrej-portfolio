@@ -9,10 +9,19 @@
       "title": "404",
       "description": "The page you are looking for does not exist.",
       "buttonText": "Go to homepage"
+    },
+    "commandMenu": {
+      "title": "Command Menu",
+      "placeholder": "What do you need to find?",
+      "subtitles": {
+        "links": "Links",
+        "projects": "Projects"
+      },
+      "noResults": "No results found for \"{value}\""
     }
   },
   "metadata": {
-    "title": "Ondřej Pták | Frontend developer",
+    "title": "Ondřej Pták | Fullstack Developer",
     "description": "I specialize in designing and building modern, responsive web applications that deliver exceptional user experiences and drive business growth.",
     "workTitle": "Ondřej Pták | Projects",
     "projectTitle": "Ondřej Pták | ",
@@ -37,8 +46,8 @@
       "title": "Ondřej Pták",
       "location": "Pilsen, Czech Republic",
       "description": {
-        "0": "I am a 19 year old Czech Frontend Developer specializing in creating modern and responsive web applications.",
-        "1": "As a frontend developer, I also have experience with backend development, which allows me to better understand the entire application development process.",
+        "0": "I am a 20 year old Czech Fullstack Developer specializing in creating modern and responsive web applications.",
+        "1": "As a Fullstack Developer, I also have experience with backend development, which allows me to better understand the entire application development process.",
         "2": "Currently, I am working on several projects that I would be happy to show you."
       }
     },
@@ -79,6 +88,11 @@
       "title": "VOŠ a SPŠE | Buffet reservation",
       "description": "I created the entire frontend for the meal reservation system in the school buffet. The project was part of the graduation project at SPŠE and VOŠ in Pilsen 2024/2025.",
       "detailedDescription": "I created the entire frontend for the school buffet meal reservation system. The project was created as part of the graduation project at the SPŠE and VOŠ in Pilsen 2024/2025. It allows users to browse the menu, add items to the cart, and place orders. Administrators can manage the menu, orders. I created the frontend in React with TailwindCSS. The backend was written in PHP by my classmate. The application communicates with the backend via REST API."
+    },
+    "pixelverse": {
+      "title": "PixelVerse | Community platform for pixel artists",
+      "description": "I created a modern community platform for pixel artists that allows sharing creations, commenting on posts, and discovering new works within the pixel art community.",
+      "detailedDescription": "I created a modern community platform for pixel artists that allows sharing creations, commenting on posts, and discovering new works within the pixel art community. The project was designed with an emphasis on scalability, clean design, and smooth user experience across devices. The application includes a system of user profiles, comments, ratings, and achievements, and thanks to integration with Clerk and Sanity.io, it provides secure authentication and content management."
     }
   },
   "experience": {
@@ -89,11 +103,16 @@
         "title": "VOŠ a SPŠE Plzeň",
         "subtitle": "Graduation with honors | Application and web development",
         "description": "I studied at VOŠ a SPŠE Plzeň, where I focused on application and web development. I graduated with honors in 2024/2025. During my studies, I gained a solid foundation in programming languages, web technologies, and software development methodologies."
+      },
+      "university": {
+        "title": "Faculty of Applied Sciences - West Bohemian University in Pilsen",
+        "subtitle": "Student 1st year | Software Engineering",
+        "description": "Currently studying 1st year at Faculty of Applied Sciences, Software Engineering program"
       }
     },
     "ownprojects": {
       "title": "Personal Projects",
-      "subtitle": "Frontend/Fullstack Developer",
+      "subtitle": "Fullstack Developer",
       "description": "I work as a freelance frontend developer, where I participate in various projects. I have experience in developing web applications that include both frontend and backend."
     },
     "projects": {
@@ -101,6 +120,11 @@
         "title": "VOŠ a SPŠE | Buffet reservation",
         "subtitle": "Graduation project",
         "description": "I created the entire frontend for the meal reservation system in the school buffet. The project was part of the graduation project at VOŠ a SPŠE Plzeň 2024/2025."
+      },
+      "pixelverse": {
+        "title": "PixelVerse | Community platform for pixel artists",
+        "subtitle": "Personal project",
+        "description": "I created a modern community platform for pixel artists, which allows users to share their art, comment on posts and discover new works within the pixel art community. The project was designed with scalability in mind, clean design and smooth user experience across devices. The application includes user profile system, comments, ratings and achievements, and thanks to integration with Clerk and Sanity.io provides secure authentication and content management."
       }
     }
   }

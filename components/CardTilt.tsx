@@ -43,10 +43,6 @@ const CardTilt = ({
     setTransformStyle(newTransform);
   };
 
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
-
   const handleMouseLeave = () => {
     setIsHovering(false);
     setTransformStyle("");
@@ -60,7 +56,6 @@ const CardTilt = ({
         className
       )}
       onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
         transform: transformStyle || undefined,
