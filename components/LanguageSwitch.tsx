@@ -2,12 +2,17 @@
 
 import { useLocale } from "next-intl";
 import React from "react";
-import { Button } from "./ui/button";
-import CSFlag from "../assets/cs-flag.svg";
-import USFlag from "../assets/us-flag.svg";
 
 import { usePathname, useRouter } from "@/i18n/routing";
-import Image from "next/image";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+import { Languages } from "lucide-react";
 
 const LanguageSwitch = () => {
   const locale = useLocale();
@@ -20,25 +25,20 @@ const LanguageSwitch = () => {
   };
 
   return (
-    <button onClick={handleLanguageChange} className="cursor-pointer h-5">
-      {locale === "en" ? (
-        <Image
-          src={CSFlag}
-          alt="Czech flag"
-          width={32}
-          height={32}
-          className="size-full"
-        />
-      ) : (
-        <Image
-          src={USFlag}
-          alt="US flag"
-          width={32}
-          height={32}
-          className="size-full"
-        />
-      )}
-    </button>
+    <Select value={locale} onValueChange={handleLanguageChange}>
+      <SelectTrigger>
+        <SelectValue>
+          {locale === "en" ? "EN" : "CS"}
+          <Languages />
+        </SelectValue>
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectItem value="en">EN</SelectItem>
+          <SelectItem value="cs">CS</SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
   );
 };
 
