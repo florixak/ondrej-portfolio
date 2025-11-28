@@ -55,6 +55,10 @@
       "title": "Dovednosti",
       "description": "Zde jsou některé z technologií, které ovládám."
     },
+    "cards": {
+      "title": "Prozkoumejte mé portfolio",
+      "description": "Objevte mou práci a zkušenosti prostřednictvím projektů, které jsem vyvinul, a dovedností."
+    },
     "work": {
       "title": "Práce & Projekty",
       "description": "Zde jsou některé z projektů, na kterých jsem v minulosti pracoval.",

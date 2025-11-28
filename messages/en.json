@@ -47,9 +47,13 @@
       "location": "Pilsen, Czech Republic",
       "description": {
         "0": "I am a 20 year old Czech Fullstack Developer specializing in creating modern and responsive web applications.",
-        "1": "As a Fullstack Developer, I also have experience with backend development, which allows me to better understand the entire application development process.",
+        "1": "I have mainly experience with frontend, but I also have some experience with backend, which allows me to better understand the whole application development process.",
         "2": "Currently, I am working on several projects that I would be happy to show you."
       }
+    },
+    "cards": {
+      "title": "Explore My Portfolio",
+      "description": "Discover my work and experience through the projects I've developed and the skills."
     },
     "skills": {
       "title": "Skills",
