@@ -1,6 +1,6 @@
 import React from "react";
-import AnimationWrapper from "./AnimationWrapper";
-import ShojiPanel from "./ShojiPanel";
+import AnimationWrapper from "../AnimationWrapper";
+import ShojiPanel from "../ShojiPanel";
 import { Briefcase, CodeSquare } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
