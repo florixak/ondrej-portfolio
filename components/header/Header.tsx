@@ -1,10 +1,10 @@
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "../ThemeSwitch";
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import LanguageSwitch from "./LanguageSwitch";
 import NavLink from "./NavLink";
 import MobileNav from "./MobileNav";
-import CommandMenu from "./CommandMenu";
+import CommandMenu from "../CommandMenu";
 import KbdInfo from "./kbd-info";
 
 export type NavLink = {
@@ -39,8 +39,8 @@ const Header = async () => {
         ))}
         <CommandMenu navLinks={navLinks} />
 
-        <LanguageSwitch />
         <ThemeSwitch />
+        <LanguageSwitch />
       </nav>
       <MobileNav navLinks={navLinks} />
     </header>
