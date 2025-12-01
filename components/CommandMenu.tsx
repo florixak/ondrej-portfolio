@@ -2,7 +2,7 @@
 
 import { Command } from "cmdk";
 import { useEffect, useState } from "react";
-import { NavLink } from "./Header";
+import { NavLink } from "./header/Header";
 import { useRouter } from "@/i18n/routing";
 import { projects } from "@/data/data";
 import { useTranslations } from "next-intl";
