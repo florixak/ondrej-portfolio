@@ -1,4 +1,3 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { JSX } from "react";
 
 export type Project = {
@@ -10,7 +9,7 @@ export type Project = {
   technologies: string[];
   featured?: boolean;
   url?: string;
-  images: string[] | StaticImport[];
+  images: string[];
   github: string;
   createdAt?: string;
   lastUpdated?: string;

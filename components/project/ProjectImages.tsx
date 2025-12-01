@@ -6,11 +6,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { getTranslations } from "next-intl/server";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 
 type ProjectImagesProps = {
-  images: Array<string | StaticImport>;
+  images: Array<string>;
 };
 
 const ProjectImages = async ({ images }: ProjectImagesProps) => {
@@ -27,7 +26,9 @@ const ProjectImages = async ({ images }: ProjectImagesProps) => {
             <Image
               src={image}
               alt={`Project image ${index + 1}`}
-              className="object-cover rounded-lg"
+              width={800}
+              height={600}
+              className="object-cover rounded-lg max-h-116 w-full"
             />
           </CarouselItem>
         ))}
@@ -35,7 +36,7 @@ const ProjectImages = async ({ images }: ProjectImagesProps) => {
       <CarouselPrevious className="cursor-pointer hidden md:flex" />
       <CarouselNext className="cursor-pointer hidden md:flex" />
 
-      <p className="flex justify-center text-sm text-muted-foreground">
+      <p className="flex justify-center text-sm text-muted-foreground mt-2">
         {t("swipeImage")}
       </p>
     </Carousel>
