@@ -23,7 +23,7 @@ const ThemeSwitch = () => {
   }
 
   return (
-    <button className="cursor-pointer w-10 h-10" onClick={handleThemeChange}>
+    <button className="cursor-pointer h-10" onClick={handleThemeChange}>
       {theme === "dark" ? <Sun /> : <Moon />}
     </button>
   );
