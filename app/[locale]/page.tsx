@@ -1,8 +1,8 @@
 import AnimationWrapper from "@/components/AnimationWrapper";
-import FeaturedProjects from "@/components/project/FeaturedProjects";
-import Hero from "@/components/Hero";
-import Skills from "@/components/Skills";
-import Cards from "@/components/Cards";
+import FeaturedProjects from "@/components/landing-page/FeaturedProjects";
+import Hero from "@/components/landing-page/Hero";
+import Skills from "@/components/landing-page/Skills";
+import Cards from "@/components/landing-page/Cards";
 
 export default async function Home() {
   return (
