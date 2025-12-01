@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
+import Header from "@/components/header/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Locale, routing } from "@/i18n/routing";
@@ -45,7 +45,7 @@ export async function generateMetadata({
       "Multilingual websites",
     ],
     alternates: {
-      canonical: process.env.NEXT_PUBLIC_SITE_URL,
+      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}`,
       languages: {
         "en-US": "/en",
         "cs-CZ": "/cs",
@@ -103,12 +103,22 @@ export async function generateMetadata({
       description:
         messages?.metadata?.description || defaultMetadata.description,
       locale,
+      type: "website",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "Ondřej Pták | Fullstack Developer",
+        },
+      ],
     },
     twitter: {
       ...defaultMetadata.twitter,
       title: messages?.metadata?.title || defaultMetadata.title,
       description:
         messages?.metadata?.description || defaultMetadata.description,
+      images: ["/og-image.png"],
     },
   };
 }
