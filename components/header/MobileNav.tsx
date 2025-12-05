@@ -1,7 +1,7 @@
 "use client";
 
 import { NavLink as NavLinkType } from "./Header";
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "../ThemeSwitch";
 import MobileNavButton from "./MobileNavButton";
 import { useState } from "react";
 import NavLink from "./NavLink";
@@ -21,7 +21,6 @@ const MobileNav = ({ navLinks }: MobileNavProps) => {
   return (
     <nav className="md:hidden flex gap-2 items-center">
       <div className="gap-6 flex items-center">
-        <LanguageSwitch />
         <ThemeSwitch />
       </div>
 
@@ -39,6 +38,7 @@ const MobileNav = ({ navLinks }: MobileNavProps) => {
             onClick={handleOpenMenu}
           />
         ))}
+        <LanguageSwitch />
       </div>
     </nav>
   );

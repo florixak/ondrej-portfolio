@@ -23,11 +23,11 @@
   "metadata": {
     "title": "Ondřej Pták | Fullstack vývojář",
     "description": "Specializuji se na navrhování a vytváření moderních, responzivních webových aplikací, které poskytují výjimečné uživatelské zkušenosti a podporují obchodní růst.",
-    "workTitle": "Ondřej Pták | Projekty",
-    "projectTitle": "Ondřej Pták | ",
-    "experienceTitle": "Ondřej Pták | Zkušenosti",
-    "aboutTitle": "Ondřej Pták | O mně",
-    "contactTitle": "Ondřej Pták | Kontakt"
+    "workTitle": "Projekty | Ondřej Pták",
+    "projectTitle": " | Ondřej Pták",
+    "experienceTitle": "Zkušenosti | Ondřej Pták",
+    "aboutTitle": "O mně | Ondřej Pták",
+    "contactTitle": "Kontakt | Ondřej Pták"
   },
   "header": {
     "home": "Domů",
@@ -46,14 +46,18 @@
       "title": "Ondřej Pták",
       "location": "Plzeň, Česká republika",
       "description": {
-        "0": "Jsem 20-letý český Fullstack vývojář, který se specializuje na vytváření moderních a responzivních webových aplikací.",
-        "1": "Mám i zkušenosti s backendem, což mi umožňuje lépe porozumět celému procesu vývoje aplikací.",
-        "2": "V současné době pracuji na několika projektech, které vám rád ukážu."
+        "0": "Jsem dvacetiletý fullstack vývojář z České republiky, specializující se na tvorbu moderních a responzivních webových aplikací.",
+        "1": "Zaměřuji se především na frontend, ale mám i silné backendové zkušenosti, díky kterým dodávám kompletní end-to-end řešení.",
+        "2": "Momentálně pracuji na několika vzrušujících projektech, které bych vám rád představil."
       }
     },
     "skills": {
       "title": "Dovednosti",
       "description": "Zde jsou některé z technologií, které ovládám."
+    },
+    "cards": {
+      "title": "Prozkoumejte mé portfolio",
+      "description": "Objevte mou práci a zkušenosti prostřednictvím projektů, které jsem vyvinul, a dovedností."
     },
     "work": {
       "title": "Práce & Projekty",
@@ -85,7 +89,7 @@
       "buttonText": "Zobrazit více"
     },
     "buffet": {
-      "title": "VOŠ a SPŠE | Buffet rezervace",
+      "title": "Bufet rezervační systém | VOŠ a SPŠE Plzeň",
       "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025.",
       "detailedDescription": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl vytvořen v rámci maturitního projektu na SPŠE a VOŠ v Plzni 2024/2025. Umožňuje uživatelům procházet menu, přidávat položky do košíku a provádět objednávky. Správci mohou spravovat menu, objednávky. Frontend jsem vytvořil v Reactu s TailwindCSS. Backend byl napsán v PHP mým spolužákem. Aplikace komunikuje s backendem přes REST API."
     },
@@ -117,7 +121,7 @@
     },
     "projects": {
       "buffet": {
-        "title": "VOŠ a SPŠE | Buffet rezervace",
+        "title": "Bufet rezervační systém | VOŠ a SPŠE Plzeň",
         "subtitle": "Maturitní projekt",
         "description": "Vytvořil jsem celý frontend pro rezervační systém jídel ve školním buffetu. Projekt byl v rámci maturitního projektu na VOŠ a SPŠE Plzeň 2024/2025."
       },

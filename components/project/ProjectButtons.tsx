@@ -4,9 +4,14 @@ import { Project } from "@/types/types";
 import { Button } from "../ui/button";
 import { useTranslations } from "next-intl";
 
-const ProjectButtons = ({ project }: { project: Project }) => {
+type ProjectButtonsProps = {
+  github?: Project["github"];
+  url?: Project["url"];
+};
+
+const ProjectButtons = ({ github, url }: ProjectButtonsProps) => {
   const t = useTranslations("projects");
-  const { github, url } = project;
+
   return (
     <div className="flex gap-4 flex-wrap justify-center">
       {github && (
@@ -15,7 +20,7 @@ const ProjectButtons = ({ project }: { project: Project }) => {
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-20 h-10 flex items-center justify-center gap-2"
+            className="w-fit h-10 flex items-center justify-center gap-2"
           >
             {t("links.github")}
           </a>
@@ -28,7 +33,7 @@ const ProjectButtons = ({ project }: { project: Project }) => {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-20 h-10 flex items-center justify-center gap-2"
+            className="w-fit h-10 flex items-center justify-center gap-2"
           >
             {t("links.live")}
           </a>

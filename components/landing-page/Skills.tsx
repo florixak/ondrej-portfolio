@@ -14,11 +14,6 @@ const container = {
   },
 };
 
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
-
 const getElementColor = (element: string) => {
   switch (element) {
     case "Fire":
@@ -65,13 +60,7 @@ const Skills = () => {
               {category.items.map((skill) => (
                 <motion.div
                   key={skill.name}
-                  variants={item}
-                  whileHover={{
-                    scale: 1.05,
-                    rotate: [0, -2, 2, 0],
-                    transition: { duration: 0.3 },
-                  }}
-                  className={`flex items-center gap-3 p-3 rounded-xl bg-card border border-border transition-all duration-300 ${getElementColor(
+                  className={`flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:scale-110 transition-all duration-300 ${getElementColor(
                     category.element
                   )} group`}
                 >
@@ -80,6 +69,7 @@ const Skills = () => {
                       src={skill.icon}
                       alt={skill.name}
                       className="w-full h-full object-contain group-hover:rotate-360 transition-transform duration-700 ease-in-out"
+                      loading="lazy"
                     />
                   </div>
                   <span className="font-medium text-sm">{skill.name}</span>

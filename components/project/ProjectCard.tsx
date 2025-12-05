@@ -6,11 +6,11 @@ import { Button } from "../ui/button";
 import Technology from "../Technology";
 import { getTranslations } from "next-intl/server";
 
-type ProjectProps = {
+type ProjectCardProps = {
   project: ProjectType;
 };
 
-const Project = async ({ project }: ProjectProps) => {
+const ProjectCard = async ({ project }: ProjectCardProps) => {
   const t = await getTranslations("projects");
 
   return (
@@ -52,4 +52,4 @@ const Project = async ({ project }: ProjectProps) => {
   );
 };
 
-export default Project;
+export default ProjectCard;

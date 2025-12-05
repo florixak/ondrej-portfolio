@@ -23,11 +23,11 @@
   "metadata": {
     "title": "Ondřej Pták | Fullstack Developer",
     "description": "I specialize in designing and building modern, responsive web applications that deliver exceptional user experiences and drive business growth.",
-    "workTitle": "Ondřej Pták | Projects",
-    "projectTitle": "Ondřej Pták | ",
-    "experienceTitle": "Ondřej Pták | Experience",
-    "aboutTitle": "Ondřej Pták | About me",
-    "contactTitle": "Ondřej Pták | Contact"
+    "workTitle": "Projects | Ondřej Pták",
+    "projectTitle": " | Ondřej Pták",
+    "experienceTitle": "Experience | Ondřej Pták",
+    "aboutTitle": "About me | Ondřej Pták",
+    "contactTitle": "Contact | Ondřej Pták"
   },
   "header": {
     "home": "Home",
@@ -46,10 +46,14 @@
       "title": "Ondřej Pták",
       "location": "Pilsen, Czech Republic",
       "description": {
-        "0": "I am a 20 year old Czech Fullstack Developer specializing in creating modern and responsive web applications.",
-        "1": "As a Fullstack Developer, I also have experience with backend development, which allows me to better understand the entire application development process.",
-        "2": "Currently, I am working on several projects that I would be happy to show you."
+        "0": "I'm a 20-year-old Fullstack Developer from the Czech Republic, specializing in building modern, responsive web applications.",
+        "1": "With a focus on frontend development and strong backend skills, I deliver end-to-end solutions.",
+        "2": "Currently, I'm working on several exciting projects that I’d love to share with you."
       }
+    },
+    "cards": {
+      "title": "Explore My Portfolio",
+      "description": "Discover my work and experience through the projects I've developed and the skills."
     },
     "skills": {
       "title": "Skills",
@@ -85,7 +89,7 @@
       "buttonText": "View more"
     },
     "buffet": {
-      "title": "VOŠ a SPŠE | Buffet reservation",
+      "title": "Buffet Reservation System | VOŠ a SPŠE Pilsen",
       "description": "I created the entire frontend for the meal reservation system in the school buffet. The project was part of the graduation project at SPŠE and VOŠ in Pilsen 2024/2025.",
       "detailedDescription": "I created the entire frontend for the school buffet meal reservation system. The project was created as part of the graduation project at the SPŠE and VOŠ in Pilsen 2024/2025. It allows users to browse the menu, add items to the cart, and place orders. Administrators can manage the menu, orders. I created the frontend in React with TailwindCSS. The backend was written in PHP by my classmate. The application communicates with the backend via REST API."
     },
@@ -117,7 +121,7 @@
     },
     "projects": {
       "buffet": {
-        "title": "VOŠ a SPŠE | Buffet reservation",
+        "title": "Buffet Reservation System | VOŠ a SPŠE Plzeň",
         "subtitle": "Graduation project",
         "description": "I created the entire frontend for the meal reservation system in the school buffet. The project was part of the graduation project at VOŠ a SPŠE Plzeň 2024/2025."
       },

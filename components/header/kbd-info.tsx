@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Kbd, KbdGroup } from "./ui/kbd";
+import { Kbd, KbdGroup } from "../ui/kbd";
 
 const isMac = () =>
   typeof window !== "undefined" &&

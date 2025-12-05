@@ -1,7 +1,7 @@
 "use client";
 
 import { Menu } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 type MobileNavButtonProps = {
   handleOpenMenu: () => void;
@@ -9,7 +9,7 @@ type MobileNavButtonProps = {
 
 const MobileNavButton = ({ handleOpenMenu }: MobileNavButtonProps) => {
   return (
-    <Button variant="outline" onClick={handleOpenMenu} className="z-[60]">
+    <Button variant="outline" onClick={handleOpenMenu} className="z-60">
       <Menu />
     </Button>
   );

@@ -1,9 +1,3 @@
-import BuffetImage from "@/assets/buffet/buffet.png";
-import BuffetImage2 from "@/assets/buffet/buffet2.png";
-import BuffetImage3 from "@/assets/buffet/buffet3.png";
-import BuffetImage4 from "@/assets/buffet/buffet4.png";
-import BuffetImage5 from "@/assets/buffet/buffet5.png";
-import BuffetImage6 from "@/assets/buffet/buffet6.png";
 import { Project, Experience } from "@/types/types";
 import { Star, School, Github, Mail, Linkedin } from "lucide-react";
 import React from "react";
@@ -29,12 +23,12 @@ export const projects = (t: any): Project[] => [
     featured: true,
     url: "https://buffet.vlastas.cc/",
     images: [
-      BuffetImage,
-      BuffetImage2,
-      BuffetImage3,
-      BuffetImage4,
-      BuffetImage5,
-      BuffetImage6,
+      "/buffet/buffet.png",
+      "/buffet/buffet2.png",
+      "/buffet/buffet3.png",
+      "/buffet/buffet4.png",
+      "/buffet/buffet5.png",
+      "/buffet/buffet6.png",
     ],
     github: "https://github.com/Web-Projekty/buffet-rezervace",
     createdAt: "2024-09-13",
@@ -58,7 +52,12 @@ export const projects = (t: any): Project[] => [
     ],
     featured: true,
     url: "https://pixel-verse-eta.vercel.app/",
-    images: [],
+    images: [
+      "/pixelverse/pixelverse.png",
+      "/pixelverse/pixelverse2.png",
+      "/pixelverse/pixelverse3.png",
+      "/pixelverse/pixelverse4.png",
+    ],
     github: "https://github.com/florixak/PixelVerse",
     createdAt: "2024-09-13",
     lastUpdated: "2024-09-13",
